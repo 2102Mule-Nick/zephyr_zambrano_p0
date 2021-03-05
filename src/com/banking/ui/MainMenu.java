@@ -5,13 +5,10 @@ import java.util.Scanner;
 import com.banking.dao.AccountDao;
 import com.banking.dao.AccountDaoKryo;
 import com.banking.pojo.Account;
-import com.banking.service.AuthenticationService;
 
 public class MainMenu implements Menu {
 
 	private Scanner scanner;
-	
-	private AuthenticationService authService;
 	
 	private AccountDaoKryo accountDao;
 	
@@ -25,9 +22,8 @@ public class MainMenu implements Menu {
 		super();
 	}
 	
-	public MainMenu(AuthenticationService authService, AccountDaoKryo accountDao) {
+	public MainMenu(AccountDaoKryo accountDao) {
 		super();
-		this.authService = authService;
 		this.accountDao = accountDao;
 	}
 
@@ -401,15 +397,7 @@ public class MainMenu implements Menu {
 	public void setScanner(Scanner scanner) {
 		this.scanner = scanner;
 	}
-
-	public AuthenticationService getAuthService() {
-		return authService;
-	}
 	
-	public void setAuthService(AuthenticationService authService) {
-		this.authService = authService;
-	}
-
 	public AccountDao getAccountDao() {
 		return accountDao;
 	}

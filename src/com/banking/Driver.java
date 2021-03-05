@@ -2,7 +2,6 @@ package com.banking;
 
 import java.util.Scanner;
 
-import com.banking.dao.AccountDao;
 import com.banking.dao.AccountDaoKryo;
 import com.banking.service.AuthenticationService;
 import com.banking.service.AuthenticationServiceKryo;
@@ -15,16 +14,8 @@ import com.banking.ui.WelcomeMenu;
 public class Driver {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Scanner scanner = new Scanner(System.in);
-		
-		// not using this because I am using log4j.properties file instead
-		// BasicConfigurator.configure();
-		
-		// no Kryo
-		// AccountDao accountDao = new AccountDaoImplementation();
-		// AuthenticationService authService = new AuthenticationServiceImplementation(accountDao);
 		
 		// Kryo
 		AccountDaoKryo accountDao = new AccountDaoKryo();
