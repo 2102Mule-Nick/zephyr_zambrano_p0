@@ -3,8 +3,6 @@ package com.banking;
 import java.util.Scanner;
 
 import com.banking.dao.AccountDaoKryo;
-import com.banking.service.AuthenticationService;
-import com.banking.service.AuthenticationServiceKryo;
 import com.banking.ui.LoginMenu;
 import com.banking.ui.MainMenu;
 import com.banking.ui.Menu;
@@ -19,21 +17,18 @@ public class Driver {
 		
 		// Kryo
 		AccountDaoKryo accountDao = new AccountDaoKryo();
-		AuthenticationService authService = new AuthenticationServiceKryo(accountDao);
 		
 		// postgres
 		// AccountDao accountDao = new AccountDaoPostgress;
 		// AccountDaoPostgress accountDao = new AccountDaoPostgress;
 		
-		MainMenu mainMenu = new MainMenu(authService, accountDao);
-		Menu signupMenu = new SignupMenu(authService, accountDao, mainMenu);
-		Menu loginMenu = new LoginMenu(authService, accountDao, mainMenu);
+		MainMenu mainMenu = new MainMenu(accountDao);
+		Menu signupMenu = new SignupMenu(accountDao, mainMenu);
+		Menu loginMenu = new LoginMenu(accountDao, mainMenu);
 		Menu welcomeMenu = new WelcomeMenu(loginMenu, signupMenu);
 		
 		((SignupMenu)signupMenu).setMainMenu(mainMenu);
-		((SignupMenu)signupMenu).setAuthService(authService);
 		((LoginMenu)loginMenu).setMainMenu(mainMenu);
-		((LoginMenu)loginMenu).setAuthService(authService);
 		
 		loginMenu.setScanner(scanner);
 		signupMenu.setScanner(scanner);
