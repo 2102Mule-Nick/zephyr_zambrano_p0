@@ -256,6 +256,12 @@ public class MainMenu implements Menu {
 							usernameTaken = accountDao.getAccountByUsername(newUsername);
 						}
 						
+						
+						// TODO replace Kryo with database implementation
+						// account.setUsername(newUsername);						
+						
+						// this was specific to Kryo, because changing the username meant renaming the file
+						// replacing this with updating the username in the database's username column
 						boolean fileUpdated = accountDao.renameFileWithNewUsername(account.getUsername(), newUsername);
 						if (fileUpdated) {
 							
@@ -397,7 +403,7 @@ public class MainMenu implements Menu {
 	public void setScanner(Scanner scanner) {
 		this.scanner = scanner;
 	}
-	
+
 	public AccountDao getAccountDao() {
 		return accountDao;
 	}

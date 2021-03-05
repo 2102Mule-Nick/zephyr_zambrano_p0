@@ -2,9 +2,10 @@ package com.banking.pojo;
 
 public class Account {
 	
+	private int accountId;
+	
 	private String username;
 	private String password;
-	private String hashedPassword;
 	
 	private String fullName;
 	private String firstname;
@@ -55,37 +56,13 @@ public class Account {
 		this.checkingAccountBalance = 0;
 		this.savingsAccountBalance = 0;
 	}
-	
-	/*public Account(String username, String password, String hashedPassword, String firstname, String middlename,
-			String lastname, String fullname, String email, String phoneNumber, String fulladdress, String street,
-			String city, String state, String zipcode, int checkingAccountBalance, int savingsAccountBalance) {
-		super();
-		this.username = username;
-		this.password = password;
-		this.hashedPassword = hashedPassword;
-		this.firstname = firstname;
-		this.middlename = middlename;
-		this.lastname = lastname;
-		this.fullName = fullname;
-		this.email = email;
-		this.phoneNumber = phoneNumber;
-		this.fullAddress = fulladdress;
-		this.street = street;
-		this.city = city;
-		this.state = state;
-		this.zipcode = zipcode;
-		this.checkingAccountBalance = checkingAccountBalance;
-		this.savingsAccountBalance = savingsAccountBalance;
-	}*/
 
-	@Override
-	public String toString() {
-		return "Account [username=" + username + ", password=" + password + ", hashedPassword=" + hashedPassword
-				+ ", firstname=" + firstname + ", middlename=" + middlename + ", lastname=" + lastname + ", fullname="
-				+ fullName + ", email=" + email + ", phoneNumber=" + phoneNumber + ", fulladdress=" + fullAddress
-				+ ", street=" + street + ", city=" + city + ", state=" + state + ", zipcode=" + zipcode
-				+ ", checkingAccountBalance=" + checkingAccountBalance + ", savingsAccountBalance="
-				+ savingsAccountBalance + "]";
+	public int getAccountid() {
+		return accountId;
+	}
+
+	public void setAccountid(int accountid) {
+		this.accountId = accountid;
 	}
 
 	public String getUsername() {
@@ -103,15 +80,6 @@ public class Account {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	public String getHashedPassword() {
-		return hashedPassword;
-	}
-
-	public void setHashedPassword(String password) {
-		// here I would do the hashing operation before setting the password
-		this.hashedPassword = password;
-	}
 	
 	public String getFullName() {
 		return fullName;
@@ -123,9 +91,9 @@ public class Account {
 		 * Saves the full name in the private String fullName.
 		 * After doing this, it sets the separate private Strings firstname, middlename, and lastname
 		 * with the given first name, middle name, and last name
-		 * @param firstname the account user's first name
-		 * @param middlename the account user's middle name
-		 * @param lastname the account user's last name
+		 * @param String firstname the account user's first name
+		 * @param String middlename the account user's middle name
+		 * @param String lastname the account user's last name
 		 * 
 		 */
 		
@@ -154,11 +122,6 @@ public class Account {
 	}
 
 	public void setMiddlename(String middlename) {
-		
-		if (middlename.equals(null)) {
-			middlename = "";
-		}
-		
 		this.middlename = middlename;
 	}
 
@@ -196,10 +159,10 @@ public class Account {
 		 * Saves the full address in the private String fullAddress, and then saves each
 		 * piece of the address in their respective private String variables.
 		 * 
-		 * @param street
-		 * @param city
-		 * @param state
-		 * @param zipcode
+		 * @param String street
+		 * @param Strimg city
+		 * @param String state
+		 * @param String zipcode
 		 */
 		
 		this.fullAddress = street + " " + city + " " + state + " " + zipcode;

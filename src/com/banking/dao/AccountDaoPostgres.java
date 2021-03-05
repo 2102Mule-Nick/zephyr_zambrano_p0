@@ -74,6 +74,9 @@ public class AccountDaoPostgres implements AccountDao {
 			ResultSet rs = statement.executeQuery(sql);
 			
 			while (rs.next()) {
+				
+				account.setAccountid(rs.getInt("account_id"));
+				
 				account.setUsername("username");
 				account.setPassword(rs.getString("pass_word"));
 				
@@ -86,7 +89,7 @@ public class AccountDaoPostgres implements AccountDao {
 				account.setStreet(rs.getString("street"));
 				account.setCity(rs.getString("city"));
 				account.setState(rs.getString("state"));
-				account.setZipcode(rs.getString("zipcode"));
+				account.setZipcode(rs.getString("zip_code"));
 				
 				account.setFullAddress(account.getStreet(), account.getCity(), account.getState(), account.getZipcode());
 				
@@ -115,13 +118,22 @@ public class AccountDaoPostgres implements AccountDao {
 		
 		// TODO update this string
 		String sql = "insert into accounts "
-				+ "(username, pass_word, first_name, middle_name, last_name, street, city, state, zipcode,"
+				+ "(username, pass_word, first_name, middle_name, last_name, street, city, state, zip_code,"
 				+ "email, phone_number, checking_account_balance, savings_account_balance) "
-				+ "values ("
-				+ account.getUsername() + ", " + account.getPassword() + ", " + account.getFirstname()
-				+ ", " + account.getMiddlename() + ", " + account.getLastname() + ", " + account.getStreet() 
-				+ ", " + account.getCity() + ", " + account.getState() + ", " + account.getZipcode() + ", " + 
-				0 + ", " + 0 + ")";
+				+ "values ('"
+				+ account.getUsername() + "', '" 
+				+ account.getPassword() + "', '" 
+				+ account.getFirstname() + "', '" 
+				+ account.getMiddlename() + "', '" 
+				+ account.getLastname() + "', '" 
+				+ account.getStreet() + "', '" 
+				+ account.getCity() + "', '" 
+				+ account.getState() + "', '" 
+				+ account.getZipcode() + "', '"
+				+ account.getEmail() + "', '" 
+				+ account.getPhoneNumber() + "', " 
+				+ 0 + ", " 
+				+ 0 + ");";
 		
 		Statement statement;
 		
@@ -139,8 +151,42 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void updateAccount(Account account) {
-		// TODO Auto-generated method stub
-
+		
+		Connection connection = ConnectionFactoryPostgres.getConnection();
+		
+		String sql = "update accounts set "
+				+ "username = '" + account.getUsername() + "', " 
+				+ "pass_word = '" + account.getPassword() + "', " 
+				+ "first_name = '" + account.getFirstname() + "', " 
+				+ "middle_name = '" + account.getMiddlename() + "', " 
+				+ "last_name = '" + account.getLastname() + "', " 
+				+ "street = '" + account.getStreet() + "', " 
+				+ "city = '" + account.getCity() + "', " 
+				+ "state = '"+ account.getState()  + "', " 
+				+ "zip_code = '" + account.getZipcode() + "', " 
+				+ "email = '" + account.getEmail() + "', " 
+				+ "phone_number = + '" + account.getPhoneNumber() + "', " 
+				+ "checking_account_balance = " + account.getCheckingAccountBalance() + ", " 
+				+ "savings_account_balance = " +account.getSavingsAccountBalance()
+				+ "where account_id = " + account.getAccountid() 
+				+ ";";
+		
+		log.info("Attempting to update the account in the database");
+		
+		Statement statement;
+		
+		try {
+			statement = connection.createStatement();
+			statement.executeUpdate(sql);
+			connection.close();
+			
+			log.info("Successfully updated the account in the database");
+		}
+		catch (SQLException e) {
+			log.error("Unable to connect to the database; unable to create user", e);
+			e.printStackTrace();
+		}
+		
 	}
 
 	@Override
@@ -151,13 +197,31 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void viewAccountDetails(Account account) {
-		// TODO Auto-generated method stub
+		
+		log.info("Getting account details");
+		
+		System.out.println("Username: " + account.getUsername());
+		System.out.println("Password: " + account.getPassword());
+		System.out.println();
+		System.out.println("Name: " + account.getFullName());
+		System.out.println("Address: " + account.getFullAddress());
+		System.out.println("Email: " + account.getEmail());
+		System.out.println("Phone number: " + account.getPhoneNumber());
+		System.out.println();
+		System.out.println("Checking account balance: " + account.getCheckingAccountBalance());
+		System.out.println("Savings account balance: " + account.getSavingsAccountBalance());
+		System.out.println();
 
 	}
 
 	@Override
 	public void viewAccountBalances(Account account) {
-		// TODO Auto-generated method stub
+		
+		log.info("Getting account balances");
+		
+		System.out.println("Checking account balance: " + account.getCheckingAccountBalance());
+		System.out.println("Savings account balance: " + account.getSavingsAccountBalance());
+		System.out.println();
 
 	}
 
