@@ -7,7 +7,6 @@ import com.banking.exception.AccountNotFound;
 import com.banking.exception.InvalidPassword;
 import com.banking.exception.InvalidUsername;
 import com.banking.pojo.Account;
-import com.banking.service.AuthenticationService;
 
 public class LoginMenu implements Menu {
 	
@@ -16,8 +15,6 @@ public class LoginMenu implements Menu {
 	private Menu nextMenu;
 	
 	private Scanner scanner;
-	
-	private AuthenticationService authService;
 	
 	private AccountDao accountDao;
 
@@ -81,14 +78,6 @@ public class LoginMenu implements Menu {
 	public void setScanner(Scanner scanner) {
 		this.scanner = scanner;
 	}
-	
-	public AuthenticationService getAuthService() {
-		return authService;
-	}
-
-	public void setAuthService(AuthenticationService authService) {
-		this.authService = authService;
-	}
 
 	public Menu getMainMenu() {
 		return mainMenu;
@@ -110,9 +99,8 @@ public class LoginMenu implements Menu {
 		super();
 	}
 
-	public LoginMenu(AuthenticationService authService, AccountDao accountDao, MainMenu mainMenu) {
+	public LoginMenu(AccountDao accountDao, MainMenu mainMenu) {
 		super();
-		this.authService = authService;
 		this.accountDao = accountDao;
 		this.mainMenu = mainMenu;
 	}
