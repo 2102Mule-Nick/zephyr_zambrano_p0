@@ -154,6 +154,11 @@ public class Account {
 	}
 
 	public void setMiddlename(String middlename) {
+		
+		if (middlename.equals(null)) {
+			middlename = "";
+		}
+		
 		this.middlename = middlename;
 	}
 

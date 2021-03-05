@@ -30,6 +30,10 @@ public class Driver {
 		AccountDaoKryo accountDao = new AccountDaoKryo();
 		AuthenticationService authService = new AuthenticationServiceKryo(accountDao);
 		
+		// postgres
+		// AccountDao accountDao = new AccountDaoPostgress;
+		// AccountDaoPostgress accountDao = new AccountDaoPostgress;
+		
 		MainMenu mainMenu = new MainMenu(authService, accountDao);
 		Menu signupMenu = new SignupMenu(authService, accountDao, mainMenu);
 		Menu loginMenu = new LoginMenu(authService, accountDao, mainMenu);
