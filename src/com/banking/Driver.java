@@ -2,7 +2,9 @@ package com.banking;
 
 import java.util.Scanner;
 
-import com.banking.dao.AccountDaoKryo;
+import org.apache.log4j.Logger;
+
+import com.banking.dao.AccountDaoPostgres;
 import com.banking.ui.LoginMenu;
 import com.banking.ui.MainMenu;
 import com.banking.ui.Menu;
@@ -10,17 +12,19 @@ import com.banking.ui.SignupMenu;
 import com.banking.ui.WelcomeMenu;
 
 public class Driver {
+	
+	private Logger log = Logger.getRootLogger();
 
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
 		
 		// Kryo
-		AccountDaoKryo accountDao = new AccountDaoKryo();
+		// AccountDaoKryo accountDao = new AccountDaoKryo();
 		
 		// postgres
-		// AccountDao accountDao = new AccountDaoPostgress;
-		// AccountDaoPostgress accountDao = new AccountDaoPostgress;
+		// AccountDao accountDao = new AccountDaoPostgres();
+		AccountDaoPostgres accountDao = new AccountDaoPostgres();
 		
 		MainMenu mainMenu = new MainMenu(accountDao);
 		Menu signupMenu = new SignupMenu(accountDao, mainMenu);

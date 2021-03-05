@@ -2,10 +2,14 @@ package com.banking.ui;
 
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 import com.banking.dao.AccountDao;
 import com.banking.pojo.Account;
 
 public class SignupMenu implements Menu {
+	
+	private Logger log = Logger.getRootLogger();
 	
 	private MainMenu mainMenu;
 
@@ -51,6 +55,7 @@ public class SignupMenu implements Menu {
 		
 		while (usernameTaken == true) {
 			
+			log.info("User inputting username");
 			while (username.equals("")) {
 				System.out.print("Username: ");
 				username = scanner.nextLine();

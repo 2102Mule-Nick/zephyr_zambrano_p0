@@ -2,15 +2,19 @@ package com.banking.ui;
 
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 import com.banking.dao.AccountDao;
-import com.banking.dao.AccountDaoKryo;
+import com.banking.dao.AccountDaoPostgres;
 import com.banking.pojo.Account;
 
 public class MainMenu implements Menu {
+	
+	private Logger log = Logger.getRootLogger();
 
 	private Scanner scanner;
 	
-	private AccountDaoKryo accountDao;
+	private AccountDaoPostgres accountDao;
 	
 	private Account account;
 	
@@ -22,7 +26,7 @@ public class MainMenu implements Menu {
 		super();
 	}
 	
-	public MainMenu(AccountDaoKryo accountDao) {
+	public MainMenu(AccountDaoPostgres accountDao) {
 		super();
 		this.accountDao = accountDao;
 	}
@@ -258,11 +262,11 @@ public class MainMenu implements Menu {
 						
 						
 						// TODO replace Kryo with database implementation
-						// account.setUsername(newUsername);						
+						account.setUsername(newUsername);						
 						
 						// this was specific to Kryo, because changing the username meant renaming the file
 						// replacing this with updating the username in the database's username column
-						boolean fileUpdated = accountDao.renameFileWithNewUsername(account.getUsername(), newUsername);
+						/*boolean fileUpdated = accountDao.renameFileWithNewUsername(account.getUsername(), newUsername);
 						if (fileUpdated) {
 							
 							account.setUsername(newUsername);
@@ -272,7 +276,7 @@ public class MainMenu implements Menu {
 						else {
 							System.out.println("Unable to update the file with new username. Please try again later.");
 							System.out.println();
-						}
+						}*/
 					}
 					else {
 						System.out.println("Invalid selection; please try again");
@@ -408,8 +412,8 @@ public class MainMenu implements Menu {
 		return accountDao;
 	}
 
-	public void setAccountDao(AccountDaoKryo accountDaoKryo) {
-		this.accountDao = accountDaoKryo;
+	public void setAccountDao(AccountDaoPostgres accountDao) {
+		this.accountDao = accountDao;
 	}
 	
 	public static void help() {

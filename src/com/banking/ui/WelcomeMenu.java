@@ -2,7 +2,11 @@ package com.banking.ui;
 
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 public class WelcomeMenu implements Menu {
+	
+	private Logger log = Logger.getRootLogger();
 	
 	private Scanner scanner;
 	
@@ -23,7 +27,7 @@ public class WelcomeMenu implements Menu {
 		System.out.println();
 		
 		// user selects whether they want to log in to an existing account or create a new account
-		System.out.println("Would you like to log in or sign up? ('l' or log in, 's' for sign up): ");
+		System.out.println("Would you like to log in or sign up? ('l' or log in, 's' for sign up, 'q' to quit'): ");
 		System.out.print("Your selection: ");
 		String selection = scanner.nextLine();
 		System.out.println();
@@ -33,6 +37,11 @@ public class WelcomeMenu implements Menu {
 		}
 		else if (selection.equals("s") || selection.equals("S")) {
 			nextMenu = signupMenu;
+		}
+		else if (selection.equals("q") || selection.equals("Q")) {
+			System.out.println("Exiting program. Have a nice day!");
+			System.out.println();
+			nextMenu = null;
 		}
 		else {
 			System.out.println("Invalid selection; please try again.");

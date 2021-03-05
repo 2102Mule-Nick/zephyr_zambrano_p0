@@ -1,7 +1,6 @@
 package com.banking.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -9,6 +8,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import com.banking.MoneyManagement;
 import com.banking.exception.AccountNotFound;
 import com.banking.exception.InvalidPassword;
 import com.banking.exception.InvalidUsername;
@@ -19,21 +19,61 @@ public class AccountDaoPostgres implements AccountDao {
 
 	private Logger log = Logger.getRootLogger();
 	
+	// public Connection connection = ConnectionFactoryPostgres.getConnection();
+	
+	// TODO remove implementation and get rid of unneeded methods
+	
+	// TODO change regular SQL statements into PREPARED statements to prevent SQL injection attacks
+	
 	@Override
 	public List<Account> getAllAccounts() {
 		// TODO Auto-generated method stub
+		// no longer needed
 		return null;
 	}
 
 	@Override
 	public boolean getAccountByUsername(String username) {
-		// TODO Auto-generated method stub
+		
+		log.info("Checking to see if the username is taken");
+		
+		Connection connection = ConnectionFactoryPostgres.getConnection();
+		
+		try {
+			
+			log.info("Successfully connected to the database");
+			
+			String sql = "select * from accounts where user_name = '" + username + "';";
+			
+			Statement statement = connection.createStatement();
+			
+			ResultSet rs = statement.executeQuery(sql);
+			
+			connection.close();
+			
+			if (rs.next()) {
+				log.warn("Username already taken");
+				return true;
+			}
+			else {
+				log.info("Username is available");
+				return false;
+			}
+		
+		}
+		catch (SQLException e) { // wrapper for any exception or error state the database would throw (not to be confused with wrapper classes)
+			log.error("Unable to connect to the database", e);
+			e.printStackTrace();
+		}
+		
 		return false;
+		
 	}
 
 	@Override
 	public boolean getAccountByPassword(String password) {
 		// TODO Auto-generated method stub
+		// no longer needed
 		return false;
 	}
 
@@ -41,33 +81,17 @@ public class AccountDaoPostgres implements AccountDao {
 	public Account getAccountByUsernameAndPassword(String username, String password)
 			throws InvalidUsername, InvalidPassword, AccountNotFound {
 		
-		// issue with this version of the postgres driver where it doesn't actually load the driver
-		// you have to specifically tell it to load this driver into memory
-		try {
-			Class.forName("org.postgresql.Driver");
-		}
-		catch (ClassNotFoundException e) {
-			System.out.println("Failed to load Driver");
-		}
-
-				
-		// our database is run on localhost, but a real database would have a real url location
-		// 5432 is the default postgres port
-		// ? in a url script is for the query parameters (example: username = username)
+		log.info("Attempting to retrieve an existing account from the database");
+		
+		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
 		Account account = new Account();
 		
-		log.info("Attempting to retrieve the account from the database");
-		
-		String url = "jdbc:postgresql://" + System.getenv("BankingApplication_DB_URL") + ":5432/" + "postgres" + "?";
-		
-		String user = System.getenv("BankingApplication_DB_Username");
-		String pass = System.getenv("BankingApplication_DB_Password");
-		
-		try (Connection connection = DriverManager.getConnection(url, user, pass)) { // auto closes resources; don't need close statement
+		try {
+			
 			log.info("Successfully connected to the database");
 			
-			String sql = "select * from account where username = " + username;
+			String sql = "select * from accounts where user_name = " + username;
 			
 			Statement statement = connection.createStatement();
 			
@@ -75,9 +99,11 @@ public class AccountDaoPostgres implements AccountDao {
 			
 			while (rs.next()) {
 				
+				log.info("Account found in the database");
+				
 				account.setAccountid(rs.getInt("account_id"));
 				
-				account.setUsername("username");
+				account.setUsername("user_name");
 				account.setPassword(rs.getString("pass_word"));
 				
 				account.setFirstname(rs.getString("first_name"));
@@ -100,6 +126,8 @@ public class AccountDaoPostgres implements AccountDao {
 				account.setCheckingAccountBalance(rs.getInt("savings_account_balance"));
 			}
 			
+			connection.close();
+			
 			return account;
 			
 		}
@@ -114,11 +142,12 @@ public class AccountDaoPostgres implements AccountDao {
 	@Override
 	public void createAccount(Account account) {
 		
+		log.info("Attempting to create a new account");
+		
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
-		// TODO update this string
 		String sql = "insert into accounts "
-				+ "(username, pass_word, first_name, middle_name, last_name, street, city, state, zip_code,"
+				+ "(user_name, pass_word, first_name, middle_name, last_name, street, city, state, zip_code,"
 				+ "email, phone_number, checking_account_balance, savings_account_balance) "
 				+ "values ('"
 				+ account.getUsername() + "', '" 
@@ -141,12 +170,13 @@ public class AccountDaoPostgres implements AccountDao {
 			statement = connection.createStatement();
 			statement.executeUpdate(sql);
 			connection.close();
+			log.info("Successfully created a new account");
 		}
 		catch (SQLException e) {
 			log.error("Unable to connect to the database; unable to create user", e);
 			e.printStackTrace();
 		}
-
+		
 	}
 
 	@Override
@@ -155,7 +185,7 @@ public class AccountDaoPostgres implements AccountDao {
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
 		String sql = "update accounts set "
-				+ "username = '" + account.getUsername() + "', " 
+				+ "user_name = '" + account.getUsername() + "', " 
 				+ "pass_word = '" + account.getPassword() + "', " 
 				+ "first_name = '" + account.getFirstname() + "', " 
 				+ "middle_name = '" + account.getMiddlename() + "', " 
@@ -167,9 +197,8 @@ public class AccountDaoPostgres implements AccountDao {
 				+ "email = '" + account.getEmail() + "', " 
 				+ "phone_number = + '" + account.getPhoneNumber() + "', " 
 				+ "checking_account_balance = " + account.getCheckingAccountBalance() + ", " 
-				+ "savings_account_balance = " +account.getSavingsAccountBalance()
-				+ "where account_id = " + account.getAccountid() 
-				+ ";";
+				+ "savings_account_balance = " + account.getSavingsAccountBalance() + " "
+				+ "where account_id = " + account.getAccountid() + ";";
 		
 		log.info("Attempting to update the account in the database");
 		
@@ -191,7 +220,24 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void deleteAccount(Account account) {
-		// TODO Auto-generated method stub
+		
+		log.trace("deleteAccount method in AccountDaoPostgres class");
+		log.info("Attempting to delete account");
+		
+		Connection connection = ConnectionFactoryPostgres.getConnection();
+		
+		String sql = "delete * from accounts where account_id = '" + account.getAccountid() + "';";
+		
+		Statement statement;
+		try {
+			statement = connection.createStatement();
+			statement.executeUpdate(sql);
+			connection.close();
+		}
+		catch (SQLException e) {
+			log.error("Unable to connect to database to delete account");
+			e.printStackTrace();
+		}
 
 	}
 
@@ -227,38 +273,224 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void depositIntoChecking(Account account, String amount) {
-		// TODO Auto-generated method stub
+		
+		log.info("Attempting to deposit into checking");
+		
+		boolean isMoney = false;
+		try {
+			isMoney = MoneyManagement.isPositiveIntGreaterThanZero(amount);
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
+		
+		if (isMoney == true) {
+			System.out.println("You would like to deposit " + amount);
+			System.out.println();
+			int deposit = MoneyManagement.convertStringToInt(amount);
+			int currentBalance = account.getCheckingAccountBalance();
+			account.setCheckingAccountBalance(currentBalance + deposit);
+			System.out.println(deposit + " has been successfully deposited into your checking account.");
+			System.out.println("Current checking account balance: " + account.getCheckingAccountBalance());
+			System.out.println();
+		}
+		else {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
 
 	}
 
 	@Override
 	public void depositIntoSavings(Account account, String amount) {
-		// TODO Auto-generated method stub
-
+		
+		log.info("Attempting to deposit into savings");
+		
+		boolean isMoney = false;
+		try {
+			isMoney = MoneyManagement.isPositiveIntGreaterThanZero(amount);
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
+		
+		if (isMoney == true) {
+			System.out.println("You would like to deposit " + amount);
+			System.out.println();
+			int deposit = MoneyManagement.convertStringToInt(amount);
+			int currentBalance = account.getSavingsAccountBalance();
+			account.setSavingsAccountBalance(currentBalance + deposit);
+			System.out.println(deposit + " has been successfully deposited into your savings account.");
+			System.out.println("Current savings account balance: " + account.getSavingsAccountBalance());
+			System.out.println();
+		}
+		else {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
+		
 	}
 
 	@Override
 	public void withdrawFromChecking(Account account, String amount) {
-		// TODO Auto-generated method stub
+		
+		log.info("Attempting to withdraw from checking");
+		
+		boolean isMoney = false;
+		try {
+			isMoney = MoneyManagement.isPositiveIntGreaterThanZero(amount);
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
+		
+		if (isMoney == true) {
+			System.out.println("You would like to withdraw " + amount);
+			System.out.println();
+			int withdraw = MoneyManagement.convertStringToInt(amount);
+			int currentBalance = account.getCheckingAccountBalance();
+			
+			if (withdraw > currentBalance) {
+				System.out.println("Can't withdraw more money than what is in your account.");
+				System.out.println("Nothing has been withdrawn.");
+				System.out.println();
+			}
+			else {
+				account.setCheckingAccountBalance(currentBalance - withdraw);
+				System.out.println(withdraw + " has been successfully withdrawn from your checking account.");
+				System.out.println("Current checking account balance: " + account.getCheckingAccountBalance());
+				System.out.println();
+			}
+		}
+		else {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
 
 	}
 
 	@Override
 	public void withdrawFromSavings(Account account, String amount) {
-		// TODO Auto-generated method stub
-
+		
+		log.info("Attempting to withdraw from savings");
+		
+		boolean isMoney = false;
+		try {
+			isMoney = MoneyManagement.isPositiveIntGreaterThanZero(amount);
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
+		
+		if (isMoney == true) {
+			System.out.println("You would like to withdraw " + amount);
+			System.out.println();
+			int withdraw = MoneyManagement.convertStringToInt(amount);
+			int currentBalance = account.getSavingsAccountBalance();
+			
+			if (withdraw > currentBalance) {
+				System.out.println("Can't withdraw more money than what is in your account.");
+				System.out.println("Nothing has been withdrawn.");
+				System.out.println();
+			}
+			else {
+				account.setSavingsAccountBalance(currentBalance - withdraw);
+				System.out.println(withdraw + " has been successfully withdrawn from your savings account.");
+				System.out.println("Current savings account balance: " + account.getSavingsAccountBalance());
+				System.out.println();
+			}
+		}
+		else {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
+		
 	}
 
 	@Override
 	public void transferFromCheckingToSavings(Account account, String amount) {
-		// TODO Auto-generated method stub
-
+		
+log.info("Attempting to transfer money from checking to savings");
+		
+		boolean isMoney = false;
+		try {
+			isMoney = MoneyManagement.isPositiveIntGreaterThanZero(amount);
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
+		
+		if (isMoney == true) {
+			System.out.println("You would like to transfer " + amount);
+			System.out.println();
+			int transfer = MoneyManagement.convertStringToInt(amount);
+			int checkingBalance = account.getCheckingAccountBalance();
+			int savingsBalance = account.getSavingsAccountBalance();
+			
+			if (transfer > checkingBalance) {
+				System.out.println("Can't transfer more money than what is in your account.");
+				System.out.println("Nothing has been transfered.");
+				System.out.println();
+			}
+			else {
+				account.setCheckingAccountBalance(checkingBalance - transfer);
+				account.setSavingsAccountBalance(savingsBalance + transfer);
+				System.out.println(transfer + " has been successfully transfered from checking to savings.");
+				System.out.println();
+				viewAccountBalances(account);
+			}
+		}
+		else {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
+		
 	}
 
 	@Override
 	public void transferFromSavingsToChecking(Account account, String amount) {
-		// TODO Auto-generated method stub
-
+		
+log.info("Attempting to transfer money from savings to checking");
+		
+		boolean isMoney = false;
+		try {
+			isMoney = MoneyManagement.isPositiveIntGreaterThanZero(amount);
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
+		
+		if (isMoney == true) {
+			System.out.println("You would like to transfer " + amount);
+			System.out.println();
+			int transfer = MoneyManagement.convertStringToInt(amount);
+			int checkingBalance = account.getCheckingAccountBalance();
+			int savingsBalance = account.getSavingsAccountBalance();
+			
+			if (transfer > savingsBalance) {
+				System.out.println("Can't transfer more money than what is in your account.");
+				System.out.println("Nothing has been transfered.");
+				System.out.println();
+			}
+			else {
+				account.setCheckingAccountBalance(checkingBalance + transfer);
+				account.setSavingsAccountBalance(savingsBalance - transfer);
+				System.out.println(transfer + " has been successfully transfered from savings to checking.");
+				System.out.println();
+				viewAccountBalances(account);
+			}
+		}
+		else {
+			System.out.println("Invalid input; please enter a valid positive USD value.");
+			System.out.println();
+		}
+		
 	}
 
 }

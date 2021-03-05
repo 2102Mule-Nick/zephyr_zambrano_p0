@@ -8210,3 +8210,5255 @@ Log session start time Fri Mar 05 15:01:15 EST 2021<br>
 <td title="root category">root</td>
 <td title="Message">No account with the given username exists</td>
 </tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 15:40:57 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to get an account by username and password</td>
+</tr>
+
+<tr>
+<td>15</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking if an account with the given username exists</td>
+</tr>
+
+<tr>
+<td>16</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Found account with matching username</td>
+</tr>
+
+<tr>
+<td>16</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Found account with matching username</td>
+</tr>
+
+<tr>
+<td>19</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Found account with matching username</td>
+</tr>
+
+<tr>
+<td>63</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to authenticate the password</td>
+</tr>
+
+<tr>
+<td>63</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Password is invalid; can't log in</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:07:52 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to retrieve an existing account from the database</td>
+</tr>
+
+<tr>
+<td>40</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>931</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>997</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: relation &quot;account&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 15
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsernameAndPassword(AccountDaoPostgres.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.LoginMenu.displayOptions(LoginMenu.java:46)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:08:17 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>29</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>798</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>834</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: relation &quot;account&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 15
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:10:17 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>45</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>791</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>818</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: relation &quot;account&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 15
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>11049</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to create a new account</td>
+</tr>
+
+<tr>
+<td>11050</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11264</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: column &quot;username&quot; of relation &quot;accounts&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 23
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.createAccount(AccountDaoPostgres.java:160)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:142)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>11265</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11325</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>11392</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 207
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>11486</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Getting account details</td>
+</tr>
+
+<tr>
+<td>11488</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11575</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>11595</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 207
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>15440</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Getting account details</td>
+</tr>
+
+<tr>
+<td>15441</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>15612</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>15629</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 207
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>29994</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Getting account details</td>
+</tr>
+
+<tr>
+<td>29994</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>30054</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>30070</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 207
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:12:42 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to retrieve an existing account from the database</td>
+</tr>
+
+<tr>
+<td>46</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>936</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>983</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: relation &quot;account&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 15
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsernameAndPassword(AccountDaoPostgres.java:89)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.LoginMenu.displayOptions(LoginMenu.java:46)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:13:02 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>50</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>839</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>879</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: relation &quot;account&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 15
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:14:23 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>140</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2928</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>3050</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: relation &quot;account&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 15
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>9691</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to create a new account</td>
+</tr>
+
+<tr>
+<td>9692</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>9964</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully created a new account</td>
+</tr>
+
+<tr>
+<td>9965</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>10144</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>10159</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 207
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>10161</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Getting account details</td>
+</tr>
+
+<tr>
+<td>10162</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>10282</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>10374</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 207
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>10378</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Getting account details</td>
+</tr>
+
+<tr>
+<td>10379</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>10619</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>10689</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 207
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>12163</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Getting account details</td>
+</tr>
+
+<tr>
+<td>12164</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>12308</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>12350</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 207
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:21:20 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>38</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1474</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1619</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: relation &quot;account&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 15
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:40:59 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to retrieve an existing account from the database</td>
+</tr>
+
+<tr>
+<td>37</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>754</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>787</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: relation &quot;account&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 15
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsernameAndPassword(AccountDaoPostgres.java:89)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.LoginMenu.displayOptions(LoginMenu.java:46)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:41:10 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>99</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>989</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1044</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: relation &quot;account&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 15
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:42:55 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>207</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1601</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1646</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: column &quot;username&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Hint: Perhaps you meant to reference the column &quot;accounts.user_name&quot;.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 30
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:43:28 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>49</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>934</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>968</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: column &quot;username&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Hint: Perhaps you meant to reference the column &quot;accounts.user_name&quot;.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 42
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:44:09 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>35</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>744</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>820</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: column &quot;username&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Hint: Perhaps you meant to reference the column &quot;accounts.user_name&quot;.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 42
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>7183</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to create a new account</td>
+</tr>
+
+<tr>
+<td>7183</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>7259</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully created a new account</td>
+</tr>
+
+<tr>
+<td>7260</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>7327</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>7341</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 208
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:198)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>7372</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Getting account details</td>
+</tr>
+
+<tr>
+<td>7373</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>7438</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>7454</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 208
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:198)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>7558</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Getting account details</td>
+</tr>
+
+<tr>
+<td>7559</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>7627</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>7644</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 208
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:198)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>9165</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Getting account balances</td>
+</tr>
+
+<tr>
+<td>9165</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>9328</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>9343</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 208
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:198)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:47:56 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>10605</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>10606</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>10654</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: column &quot;username&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Hint: Perhaps you meant to reference the column &quot;accounts.user_name&quot;.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 42
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:50:10 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>41</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2092</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2278</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: column &quot;username&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Hint: Perhaps you meant to reference the column &quot;accounts.user_name&quot;.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 42
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:51:00 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>119</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1094</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1176</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: column &quot;username&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Hint: Perhaps you meant to reference the column &quot;accounts.user_name&quot;.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 42
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 16:52:22 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>44</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1028</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1139</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>1145</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>1145</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1356</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1364</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>1365</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>1366</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1539</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1544</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>1545</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>1545</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1598</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1601</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>1602</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>1603</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1667</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1670</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>1670</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>1670</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1750</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1754</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>1754</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>1755</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1834</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1837</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>1838</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>1838</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2003</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2007</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>2008</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2009</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2063</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2067</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>2067</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2067</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2269</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2275</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>2277</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2277</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2367</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2371</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>2371</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2371</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2532</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2535</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>2536</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2536</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2595</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2599</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>2599</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2599</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2660</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2664</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>2664</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2664</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2723</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2728</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>2729</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2729</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2797</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2803</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>2803</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2803</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2915</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2919</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>2920</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2920</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2986</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2993</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>2994</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2994</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3104</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>3107</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>3108</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>3108</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3164</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>3167</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>3167</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>3167</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3350</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>3354</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>3354</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>3354</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3505</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>3517</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>3519</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>3519</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3619</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>3621</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>3621</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>3621</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3697</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>3700</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>3700</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>3700</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3789</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>3802</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>3802</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>3803</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3982</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>3985</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>3986</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>3986</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>4151</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>4154</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>4154</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>4154</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>4213</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>4218</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>4218</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>4218</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>4329</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>4336</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>4336</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>4337</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>4401</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>4408</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>4410</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>4411</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>4486</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>4488</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>4488</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>4488</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>4670</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>4678</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>4679</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>4679</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>4888</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>4894</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>4895</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>4895</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>4970</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>4973</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>4974</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>4974</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>5082</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>5085</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>5086</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>5086</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>5145</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>5147</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>5148</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>5148</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>5345</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>5355</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>5355</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>5355</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>5428</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>5431</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>5431</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>5431</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>5499</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>5501</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>5501</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>5501</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>5662</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>5667</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>5668</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>5668</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>5847</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>5851</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>5851</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>5852</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>5932</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>5937</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>5937</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>5937</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>6010</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>6022</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>6023</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>6023</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>6216</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>6220</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>6221</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>6221</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>6571</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>6599</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>6601</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>6602</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>6821</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>6833</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>6836</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>6838</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>7042</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>7058</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>7062</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>7065</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>7301</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>7313</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>7314</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>7314</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>7504</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>7514</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>7515</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>7515</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>7752</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>7759</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>7759</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>7760</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>8002</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>8010</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>8011</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>8011</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>8082</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>8084</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>8085</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>8085</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>8366</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>8374</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>8375</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>8376</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>8628</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>8639</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>8642</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>8643</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>8764</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>8766</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>8766</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>8766</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>8836</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>8842</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>8843</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>8843</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>9031</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>9034</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>9035</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>9035</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>9107</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>9115</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>9115</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>9116</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>9211</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>9214</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>9214</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>9214</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>9316</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>9318</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>9319</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>9319</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>9497</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>9499</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>9500</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>9500</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>9697</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>9701</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>9702</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>9702</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>9909</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>9916</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>9916</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>9916</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>10235</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>10250</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>10250</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>10251</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>10513</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>10534</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>10535</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>10538</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>10690</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>10704</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>10704</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>10705</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>10887</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>10891</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>10891</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>10892</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>10983</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>10986</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>10987</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>10987</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11101</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>11105</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>11105</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>11105</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11190</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>11195</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>11195</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>11195</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11297</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>11299</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>11299</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>11300</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11364</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>11366</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>11367</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>11367</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11543</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>11546</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>11547</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>11547</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11608</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>11611</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>11611</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>11611</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11667</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>11669</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>11670</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>11670</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11846</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>11849</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>11850</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>11850</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11908</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>11911</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>11911</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>11912</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>11972</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>11976</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>11976</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>11976</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>12092</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>12095</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>12096</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>12096</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>12158</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>12161</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>12161</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>12161</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>12347</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>12349</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>12349</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>12349</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>12580</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>12585</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Username already taken</td>
+</tr>
+
+<tr>
+<td>12585</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>12585</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 17:05:09 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>168</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1685</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1715</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2005)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2605)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 17:05:50 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>49</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>802</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>831</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2005)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2605)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:55)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 17:06:16 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>277</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1800</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1825</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2005)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2605)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 17:09:01 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>31</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>861</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>888</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2005)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2605)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 17:09:47 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>46</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>849</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>916</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2005)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2605)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 17:18:04 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>64</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>960</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>992</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2005)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2605)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsername(AccountDaoPostgres.java:54)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.SignupMenu.displayOptions(SignupMenu.java:65)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 17:28:59 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>40</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>728</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 17:29:55 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>51</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>861</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 17:31:06 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">User inputting username</td>
+</tr>
+
+<tr>
+<td>2300</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>2331</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3102</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 17:32:53 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">User inputting username</td>
+</tr>
+
+<tr>
+<td>1254</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>1320</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3271</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>3380</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Username is available</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 18:00:29 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">User inputting username</td>
+</tr>
+
+<tr>
+<td>1546</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Checking to see if the username is taken</td>
+</tr>
+
+<tr>
+<td>1582</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2462</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>2488</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Username is available</td>
+</tr>
+
+<tr>
+<td>8484</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to create a new account</td>
+</tr>
+
+<tr>
+<td>8485</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>8693</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully created a new account</td>
+</tr>
+
+<tr>
+<td>8693</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>8783</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>8822</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 207
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:52)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+
+<tr>
+<td>12972</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>13049</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>13075</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database; unable to create user</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: invalid input syntax for type double precision: &quot;a&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 207
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:209)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.quit(MainMenu.java:450)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:356)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri Mar 05 18:00:49 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to retrieve an existing account from the database</td>
+</tr>
+
+<tr>
+<td>33</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>816</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>854</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to connect to the database</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: column &quot;username&quot; does not exist
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Hint: Perhaps you meant to reference the column &quot;accounts.user_name&quot;.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 42
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.getAccountByUsernameAndPassword(AccountDaoPostgres.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.LoginMenu.displayOptions(LoginMenu.java:46)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:45)
+</td></tr>
