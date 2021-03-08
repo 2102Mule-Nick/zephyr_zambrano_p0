@@ -25,7 +25,6 @@ public class AccountDaoImplementation implements AccountDao {
 		accountList.add(account);
 	}
 	
-	@Override
 	public List<Account> getAllAccounts() {
 		return accountList;
 	}
@@ -48,7 +47,6 @@ public class AccountDaoImplementation implements AccountDao {
 		
 	}
 
-	@Override
 	public boolean getAccountByPassword(String password) {
 
 		Iterator<Account> iterator = accountList.iterator();

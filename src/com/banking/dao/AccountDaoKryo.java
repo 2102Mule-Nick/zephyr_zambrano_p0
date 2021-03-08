@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -34,13 +33,6 @@ public class AccountDaoKryo implements AccountDao {
 	}
 	
 	@Override
-	public List<Account> getAllAccounts() {
-		// TODO Auto-generated method stub
-		// no longer needed
-		return null;
-	}
-
-	@Override
 	public boolean getAccountByUsername(String username) {
 
 		log.info("Checking if the given username is already taken");
@@ -55,13 +47,6 @@ public class AccountDaoKryo implements AccountDao {
 			return false;
 		}
 		
-	}
-
-	@Override
-	public boolean getAccountByPassword(String password) {
-		// TODO Auto-generated method stub
-		// no longer needed
-		return false;
 	}
 	
 	public boolean accountExists(String username) {

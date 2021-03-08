@@ -1,7 +1,5 @@
 package com.banking.dao;
 
-import java.util.List;
-
 import com.banking.exception.AccountNotFound;
 import com.banking.exception.InvalidPassword;
 import com.banking.exception.InvalidUsername;
@@ -9,11 +7,7 @@ import com.banking.pojo.Account;
 
 public interface AccountDao {
 	
-	public List<Account> getAllAccounts();
-	
 	public boolean getAccountByUsername(String username);
-	
-	public boolean getAccountByPassword(String password);
 	
 	public Account getAccountByUsernameAndPassword(String username, String password) throws InvalidUsername, InvalidPassword, AccountNotFound;
 	

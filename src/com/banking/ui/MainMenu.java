@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
-import com.banking.dao.AccountDao;
 import com.banking.dao.AccountDaoPostgres;
 import com.banking.pojo.Account;
 

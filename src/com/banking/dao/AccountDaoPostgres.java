@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -19,16 +18,9 @@ public class AccountDaoPostgres implements AccountDao {
 	// TODO change regular SQL statements into PREPARED statements to prevent SQL injection attacks
 	
 	// TODO remove implements and make this it's own class so I can get rid of inherited methods that aren't needed anymore
-	
-	@Override
-	public List<Account> getAllAccounts() {
-		// TODO Auto-generated method stub
-		// no longer needed
-		return null;
-	}
 
 	@Override
-	public boolean getAccountByUsername(String username) { // TODO throw errors
+	public boolean getAccountByUsername(String username) {
 		
 		log.info("Checking to see if the username is taken");
 		
@@ -63,13 +55,6 @@ public class AccountDaoPostgres implements AccountDao {
 		
 		return false;
 		
-	}
-
-	@Override
-	public boolean getAccountByPassword(String password) {
-		// TODO Auto-generated method stub
-		// no longer needed
-		return false;
 	}
 
 	@Override
