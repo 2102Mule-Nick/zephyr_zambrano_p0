@@ -18,6 +18,8 @@ public class AccountDaoPostgres implements AccountDao {
 	
 	// TODO change regular SQL statements into PREPARED statements to prevent SQL injection attacks
 	
+	// TODO remove implements and make this it's own class so I can get rid of inherited methods that aren't needed anymore
+	
 	@Override
 	public List<Account> getAllAccounts() {
 		// TODO Auto-generated method stub
@@ -26,7 +28,7 @@ public class AccountDaoPostgres implements AccountDao {
 	}
 
 	@Override
-	public boolean getAccountByUsername(String username) {
+	public boolean getAccountByUsername(String username) { // TODO throw errors
 		
 		log.info("Checking to see if the username is taken");
 		
@@ -71,13 +73,13 @@ public class AccountDaoPostgres implements AccountDao {
 	}
 
 	@Override
-	public Account getAccountByUsernameAndPassword(String username, String password) {
+	public Account getAccountByUsernameAndPassword(String username, String password) { // TODO throw errors
 		
 		log.info("Attempting to retrieve an existing account from the database");
 		
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
-		Account account = new Account();
+		Account account = null;
 		
 		try {
 			
@@ -92,6 +94,8 @@ public class AccountDaoPostgres implements AccountDao {
 			while (rs.next()) {
 				
 				log.info("Account found in the database");
+				
+				account = new Account();
 				
 				account.setAccountId(rs.getInt("account_id"));
 				

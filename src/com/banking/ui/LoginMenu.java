@@ -45,13 +45,13 @@ public class LoginMenu implements Menu {
 		try {
 			account = accountDao.getAccountByUsernameAndPassword(username, password);
 		}
-		catch (InvalidUsername e) {
+		catch (InvalidUsername e) { // TODO get rid of these exceptions, they aren't used
 			System.out.println("Invalid username; please try again.");
 		}
-		catch (InvalidPassword e) {
+		catch (InvalidPassword e) { // TODO get rid of these exceptions, they aren't used
 			System.out.println("Invalid password; please try again.");
 		}
-		catch (AccountNotFound e) {
+		catch (AccountNotFound e) { // TODO get rid of these exceptions, they aren't used
 			System.out.println("No account with that username and password exists. Please try logging in again or creating a new account.");
 		}
 		finally {
@@ -63,6 +63,7 @@ public class LoginMenu implements Menu {
 			nextMenu = mainMenu;
 		}
 		else {
+			System.out.println("No account with that username exists. Please try logging in again or create a new account.");
 			// TODO go back to main menu if unable to log in instead of automatically quitting
 			nextMenu = null;
 		}
