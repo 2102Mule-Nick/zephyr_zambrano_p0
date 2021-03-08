@@ -1,4 +1,4 @@
-package com.banking;
+package com.banking.service;
 
 public class MoneyManagement {
 	/**

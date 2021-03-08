@@ -19,8 +19,10 @@ public class Driver {
 		
 		MainMenu mainMenu = new MainMenu(accountDao);
 		Menu signupMenu = new SignupMenu(accountDao, mainMenu);
-		Menu loginMenu = new LoginMenu(accountDao, mainMenu);
+		LoginMenu loginMenu = new LoginMenu(accountDao, mainMenu);
 		Menu welcomeMenu = new WelcomeMenu(loginMenu, signupMenu);
+		
+		loginMenu.setPreviousMenu(welcomeMenu);
 		
 		((SignupMenu)signupMenu).setMainMenu(mainMenu);
 		((LoginMenu)loginMenu).setMainMenu(mainMenu);

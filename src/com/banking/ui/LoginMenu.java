@@ -5,7 +5,6 @@ import java.util.Scanner;
 import com.banking.dao.AccountDao;
 import com.banking.exception.AccountNotFound;
 import com.banking.exception.InvalidPassword;
-import com.banking.exception.InvalidUsername;
 import com.banking.pojo.Account;
 
 public class LoginMenu implements Menu {
@@ -13,6 +12,8 @@ public class LoginMenu implements Menu {
 	private MainMenu mainMenu;
 	
 	private Menu nextMenu;
+	
+	private Menu previousMenu;
 	
 	private Scanner scanner;
 	
@@ -41,14 +42,11 @@ public class LoginMenu implements Menu {
 		try {
 			account = accountDao.getAccountByUsernameAndPassword(username, password);
 		}
-		catch (InvalidUsername e) { // TODO get rid of these exceptions, they aren't used
-			System.out.println("Invalid username; please try again.");
+		catch (AccountNotFound e) {
+			System.out.println("No account with that username exists; please try logging in again or create a new account.");
 		}
-		catch (InvalidPassword e) { // TODO get rid of these exceptions, they aren't used
+		catch (InvalidPassword e) {
 			System.out.println("Invalid password; please try again.");
-		}
-		catch (AccountNotFound e) { // TODO get rid of these exceptions, they aren't used
-			System.out.println("No account with that username and password exists. Please try logging in again or creating a new account.");
 		}
 		finally {
 			System.out.println();
@@ -59,9 +57,7 @@ public class LoginMenu implements Menu {
 			nextMenu = mainMenu;
 		}
 		else {
-			System.out.println("No account with that username exists. Please try logging in again or create a new account.");
-			// TODO go back to main menu if unable to log in instead of automatically quitting
-			nextMenu = null;
+			nextMenu = previousMenu;
 		}
 		
 	}
@@ -95,6 +91,24 @@ public class LoginMenu implements Menu {
 
 	public void setNextMenu(Menu nextMenu) {
 		this.nextMenu = nextMenu;
+	}
+	
+	
+
+	public Menu getPreviousMenu() {
+		return previousMenu;
+	}
+
+	public void setPreviousMenu(Menu previousMenu) {
+		this.previousMenu = previousMenu;
+	}
+
+	public AccountDao getAccountDao() {
+		return accountDao;
+	}
+
+	public void setAccountDao(AccountDao accountDao) {
+		this.accountDao = accountDao;
 	}
 
 	public LoginMenu() {

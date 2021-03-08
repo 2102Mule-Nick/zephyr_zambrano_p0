@@ -7,8 +7,10 @@ import java.sql.Statement;
 
 import org.apache.log4j.Logger;
 
-import com.banking.MoneyManagement;
+import com.banking.exception.AccountNotFound;
+import com.banking.exception.InvalidPassword;
 import com.banking.pojo.Account;
+import com.banking.service.MoneyManagement;
 import com.banking.util.ConnectionFactoryPostgres;
 
 public class AccountDaoPostgres implements AccountDao {
@@ -56,7 +58,7 @@ public class AccountDaoPostgres implements AccountDao {
 	}
 
 	@Override
-	public Account getAccountByUsernameAndPassword(String username, String password) { // TODO throw errors
+	public Account getAccountByUsernameAndPassword(String username, String password) throws AccountNotFound, InvalidPassword {
 		
 		log.info("Attempting to retrieve an existing account from the database");
 		
@@ -76,7 +78,15 @@ public class AccountDaoPostgres implements AccountDao {
 			
 			while (rs.next()) {
 				
-				log.info("Account found in the database");
+				log.info("Account with matching username found in the database");
+				
+				if (rs.getString("pass_word").equals(password)) {
+					log.info("The given password matches the account's password");
+				}
+				else {
+					log.warn("Invalid password; the given password does not match this account's password");
+					throw new InvalidPassword();
+				}
 				
 				account = new Account();
 				
@@ -103,11 +113,14 @@ public class AccountDaoPostgres implements AccountDao {
 				
 				account.setCheckingAccountBalance(rs.getInt("checking_account_balance"));
 				account.setCheckingAccountBalance(rs.getInt("savings_account_balance"));
+			
+				connection.close();
+				
+				return account;
 			}
 			
-			connection.close();
-			
-			return account;
+			log.warn("Account not found; no account with the given username exists");
+			throw new AccountNotFound();
 			
 		}
 		catch (SQLException e) { // wrapper for any exception or error state the database would throw (not to be confused with wrapper classes)
@@ -205,8 +218,8 @@ public class AccountDaoPostgres implements AccountDao {
 				+ account.getZipcode() + "', '"
 				+ account.getEmail() + "', '" 
 				+ account.getPhoneNumber() + "', " 
-				+ 0 + ", " 
-				+ 0 + ") "
+				+ account.getCheckingAccountBalance() + ", " 
+				+ account.getSavingsAccountBalance() + ") "
 				+ "where account_id = " + account.getAccountId() + ";";
 		
 		log.info("Attempting to update the account in the database");
