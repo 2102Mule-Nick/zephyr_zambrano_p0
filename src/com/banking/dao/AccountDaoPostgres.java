@@ -16,8 +16,6 @@ import com.banking.util.ConnectionFactoryPostgres;
 public class AccountDaoPostgres implements AccountDao {
 
 	private Logger log = Logger.getRootLogger();
-	
-	// TODO change regular SQL statements into PREPARED statements to prevent SQL injection attacks
 
 	@Override
 	public boolean getAccountByUsername(String username) {
