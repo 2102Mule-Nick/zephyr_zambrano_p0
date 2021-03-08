@@ -242,20 +242,20 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void deleteAccount(Account account) {
-		// TODO fix this method; it doesn't delete properly
 		
 		log.trace("deleteAccount method in AccountDaoPostgres class");
 		log.info("Attempting to delete account");
 		
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
-		String sql = "delete * from accounts where account_id = " + account.getAccountId() + ";";
+		String sql = "delete from accounts where account_id = " + account.getAccountId() + ";";
 		
 		Statement statement;
 		try {
 			statement = connection.createStatement();
 			statement.executeUpdate(sql);
 			connection.close();
+			log.info("Successfully deleted account");
 		}
 		catch (SQLException e) {
 			log.error("Unable to connect to database to delete account");
