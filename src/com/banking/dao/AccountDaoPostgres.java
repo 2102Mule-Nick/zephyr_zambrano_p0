@@ -9,9 +9,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.banking.MoneyManagement;
-import com.banking.exception.AccountNotFound;
-import com.banking.exception.InvalidPassword;
-import com.banking.exception.InvalidUsername;
 import com.banking.pojo.Account;
 import com.banking.util.ConnectionFactoryPostgres;
 
@@ -74,8 +71,7 @@ public class AccountDaoPostgres implements AccountDao {
 	}
 
 	@Override
-	public Account getAccountByUsernameAndPassword(String username, String password)
-			throws InvalidUsername, InvalidPassword, AccountNotFound {
+	public Account getAccountByUsernameAndPassword(String username, String password) {
 		
 		log.info("Attempting to retrieve an existing account from the database");
 		
@@ -137,6 +133,7 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void createAccount(Account account) {
+		// TODO change to prepared statements to protect against sql injection attacks
 		
 		log.info("Attempting to create a new account");
 		
@@ -177,6 +174,7 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void updateAccount(Account account) {
+		// TODO change to prepared statements to protect against sql injection attacks
 		
 		
 		/*
@@ -244,6 +242,7 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void deleteAccount(Account account) {
+		// TODO fix this method; it doesn't delete properly
 		
 		log.trace("deleteAccount method in AccountDaoPostgres class");
 		log.info("Attempting to delete account");
@@ -438,7 +437,7 @@ public class AccountDaoPostgres implements AccountDao {
 	@Override
 	public void transferFromCheckingToSavings(Account account, String amount) {
 		
-log.info("Attempting to transfer money from checking to savings");
+		log.info("Attempting to transfer money from checking to savings");
 		
 		boolean isMoney = false;
 		try {
@@ -479,7 +478,7 @@ log.info("Attempting to transfer money from checking to savings");
 	@Override
 	public void transferFromSavingsToChecking(Account account, String amount) {
 		
-log.info("Attempting to transfer money from savings to checking");
+		log.info("Attempting to transfer money from savings to checking");
 		
 		boolean isMoney = false;
 		try {
