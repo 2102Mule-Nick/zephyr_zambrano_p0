@@ -319,7 +319,7 @@ public class MainMenu implements Menu {
 					System.out.println();
 				}
 			}
-			else if(selection.equals("t") || selection.equals("T")) {
+			else if (selection.equals("t") || selection.equals("T")) {
 				System.out.println("You would like to make a transfer.");
 				System.out.println();
 				System.out.println("Which account would you like to transfer money from? ('c' for checking to savings  / 's' for savings to checking");

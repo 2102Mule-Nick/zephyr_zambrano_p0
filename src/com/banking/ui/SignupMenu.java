@@ -55,6 +55,8 @@ public class SignupMenu implements Menu {
 		
 		while (usernameTaken == true) {
 			
+			username = "";
+			
 			while (username.equals("")) {
 				System.out.print("Username: ");
 				username = scanner.nextLine();
