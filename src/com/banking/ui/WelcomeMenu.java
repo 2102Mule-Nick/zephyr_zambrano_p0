@@ -2,11 +2,7 @@ package com.banking.ui;
 
 import java.util.Scanner;
 
-import org.apache.log4j.Logger;
-
 public class WelcomeMenu implements Menu {
-	
-	private Logger log = Logger.getRootLogger();
 	
 	private Scanner scanner;
 	

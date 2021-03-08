@@ -2,8 +2,6 @@ package com.banking.ui;
 
 import java.util.Scanner;
 
-import org.apache.log4j.Logger;
-
 import com.banking.dao.AccountDao;
 import com.banking.exception.AccountNotFound;
 import com.banking.exception.InvalidPassword;
@@ -11,8 +9,6 @@ import com.banking.exception.InvalidUsername;
 import com.banking.pojo.Account;
 
 public class LoginMenu implements Menu {
-	
-	private Logger log = Logger.getRootLogger();
 	
 	private MainMenu mainMenu;
 	

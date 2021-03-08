@@ -2,14 +2,10 @@ package com.banking.ui;
 
 import java.util.Scanner;
 
-import org.apache.log4j.Logger;
-
 import com.banking.dao.AccountDaoPostgres;
 import com.banking.pojo.Account;
 
 public class MainMenu implements Menu {
-	
-	private Logger log = Logger.getRootLogger();
 
 	private Scanner scanner;
 	
@@ -156,7 +152,7 @@ public class MainMenu implements Menu {
 						}
 						
 						String zipcode = "";
-						while (state.equals("")) {
+						while (zipcode.equals("")) {
 							System.out.print("Zip code: ");
 							zipcode = scanner.nextLine();
 							System.out.println();
@@ -259,23 +255,7 @@ public class MainMenu implements Menu {
 							usernameTaken = accountDao.getAccountByUsername(newUsername);
 						}
 						
-						
-						// TODO replace Kryo with database implementation
-						account.setUsername(newUsername);						
-						
-						// this was specific to Kryo, because changing the username meant renaming the file
-						// replacing this with updating the username in the database's username column
-						/*boolean fileUpdated = accountDao.renameFileWithNewUsername(account.getUsername(), newUsername);
-						if (fileUpdated) {
-							
-							account.setUsername(newUsername);
-							System.out.println("Username has been successfully updated");
-							System.out.println();
-						}
-						else {
-							System.out.println("Unable to update the file with new username. Please try again later.");
-							System.out.println();
-						}*/
+						account.setUsername(newUsername);
 					}
 					else {
 						System.out.println("Invalid selection; please try again");

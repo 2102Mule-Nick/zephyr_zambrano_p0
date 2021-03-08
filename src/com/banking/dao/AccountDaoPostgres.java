@@ -16,8 +16,6 @@ public class AccountDaoPostgres implements AccountDao {
 	private Logger log = Logger.getRootLogger();
 	
 	// TODO change regular SQL statements into PREPARED statements to prevent SQL injection attacks
-	
-	// TODO remove implements and make this it's own class so I can get rid of inherited methods that aren't needed anymore
 
 	@Override
 	public boolean getAccountByUsername(String username) {

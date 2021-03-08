@@ -2,8 +2,6 @@ package com.banking;
 
 import java.util.Scanner;
 
-import org.apache.log4j.Logger;
-
 import com.banking.dao.AccountDaoPostgres;
 import com.banking.ui.LoginMenu;
 import com.banking.ui.MainMenu;
@@ -12,8 +10,6 @@ import com.banking.ui.SignupMenu;
 import com.banking.ui.WelcomeMenu;
 
 public class Driver {
-	
-	private Logger log = Logger.getRootLogger();
 
 	public static void main(String[] args) {
 		
