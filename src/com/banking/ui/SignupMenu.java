@@ -131,7 +131,7 @@ public class SignupMenu implements Menu {
 		}
 		
 		String zipcode = "";
-		while (state.equals("")) {
+		while (zipcode.equals("")) {
 			System.out.print("Zip code: ");
 			zipcode = scanner.nextLine();
 			System.out.println();
