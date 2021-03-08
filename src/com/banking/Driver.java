@@ -18,14 +18,14 @@ public class Driver {
 		AccountDaoPostgres accountDao = new AccountDaoPostgres();
 		
 		MainMenu mainMenu = new MainMenu(accountDao);
-		Menu signupMenu = new SignupMenu(accountDao, mainMenu);
+		SignupMenu signupMenu = new SignupMenu(accountDao, mainMenu);
 		LoginMenu loginMenu = new LoginMenu(accountDao, mainMenu);
-		Menu welcomeMenu = new WelcomeMenu(loginMenu, signupMenu);
+		WelcomeMenu welcomeMenu = new WelcomeMenu(loginMenu, signupMenu);
 		
+		signupMenu.setMainMenu(mainMenu);
+		
+		loginMenu.setMainMenu(mainMenu);
 		loginMenu.setPreviousMenu(welcomeMenu);
-		
-		((SignupMenu)signupMenu).setMainMenu(mainMenu);
-		((LoginMenu)loginMenu).setMainMenu(mainMenu);
 		
 		loginMenu.setScanner(scanner);
 		signupMenu.setScanner(scanner);
