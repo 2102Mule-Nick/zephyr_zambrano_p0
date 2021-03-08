@@ -57,12 +57,12 @@ public class Account {
 		this.savingsAccountBalance = 0;
 	}
 
-	public int getAccountid() {
+	public int getAccountId() {
 		return accountId;
 	}
 
-	public void setAccountid(int accountid) {
-		this.accountId = accountid;
+	public void setAccountId(int accountId) {
+		this.accountId = accountId;
 	}
 
 	public String getUsername() {

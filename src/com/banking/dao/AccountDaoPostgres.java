@@ -19,10 +19,6 @@ public class AccountDaoPostgres implements AccountDao {
 
 	private Logger log = Logger.getRootLogger();
 	
-	// public Connection connection = ConnectionFactoryPostgres.getConnection();
-	
-	// TODO remove implementation and get rid of unneeded methods
-	
 	// TODO change regular SQL statements into PREPARED statements to prevent SQL injection attacks
 	
 	@Override
@@ -91,7 +87,7 @@ public class AccountDaoPostgres implements AccountDao {
 			
 			log.info("Successfully connected to the database");
 			
-			String sql = "select * from accounts where user_name = " + username;
+			String sql = "select * from accounts where user_name = '" + username + "';";
 			
 			Statement statement = connection.createStatement();
 			
@@ -101,9 +97,9 @@ public class AccountDaoPostgres implements AccountDao {
 				
 				log.info("Account found in the database");
 				
-				account.setAccountid(rs.getInt("account_id"));
+				account.setAccountId(rs.getInt("account_id"));
 				
-				account.setUsername("user_name");
+				account.setUsername(rs.getString("user_name"));
 				account.setPassword(rs.getString("pass_word"));
 				
 				account.setFirstname(rs.getString("first_name"));
@@ -147,7 +143,7 @@ public class AccountDaoPostgres implements AccountDao {
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
 		String sql = "insert into accounts "
-				+ "(user_name, pass_word, first_name, middle_name, last_name, street, city, state, zip_code,"
+				+ "(user_name, pass_word, first_name, middle_name, last_name, street, city, state, zip_code, "
 				+ "email, phone_number, checking_account_balance, savings_account_balance) "
 				+ "values ('"
 				+ account.getUsername() + "', '" 
@@ -182,23 +178,51 @@ public class AccountDaoPostgres implements AccountDao {
 	@Override
 	public void updateAccount(Account account) {
 		
+		
+		/*
+		 * 
+		 * Connection conn = null;
+		
+		PreparedStatement stmt = null;
+		
+		String sql = "update user_acc set pass_word = ? WHERE username = ?";
+		
+		conn = ConnectionFactoryPostgres.getConnection();
+		
+		try {
+			stmt=conn.prepareStatement(sql);
+			stmt.setString(1, new_password);
+			stmt.setString(2, user.getUsername());
+			stmt.execute();
+			log.info("User updated");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			log.info("Unsuccessful update");
+		}
+		 * 
+		 */
+		
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
 		String sql = "update accounts set "
-				+ "user_name = '" + account.getUsername() + "', " 
-				+ "pass_word = '" + account.getPassword() + "', " 
-				+ "first_name = '" + account.getFirstname() + "', " 
-				+ "middle_name = '" + account.getMiddlename() + "', " 
-				+ "last_name = '" + account.getLastname() + "', " 
-				+ "street = '" + account.getStreet() + "', " 
-				+ "city = '" + account.getCity() + "', " 
-				+ "state = '"+ account.getState()  + "', " 
-				+ "zip_code = '" + account.getZipcode() + "', " 
-				+ "email = '" + account.getEmail() + "', " 
-				+ "phone_number = + '" + account.getPhoneNumber() + "', " 
-				+ "checking_account_balance = " + account.getCheckingAccountBalance() + ", " 
-				+ "savings_account_balance = " + account.getSavingsAccountBalance() + " "
-				+ "where account_id = " + account.getAccountid() + ";";
+				+ "(user_name, pass_word, first_name, middle_name, last_name, street, city, state, zip_code, "
+				+ "email, phone_number, checking_account_balance, savings_account_balance) "
+				+ "= ('"
+				+ account.getUsername() + "', '" 
+				+ account.getPassword() + "', '" 
+				+ account.getFirstname() + "', '" 
+				+ account.getMiddlename() + "', '" 
+				+ account.getLastname() + "', '" 
+				+ account.getStreet() + "', '" 
+				+ account.getCity() + "', '" 
+				+ account.getState() + "', '" 
+				+ account.getZipcode() + "', '"
+				+ account.getEmail() + "', '" 
+				+ account.getPhoneNumber() + "', " 
+				+ 0 + ", " 
+				+ 0 + ") "
+				+ "where account_id = " + account.getAccountId() + ";";
 		
 		log.info("Attempting to update the account in the database");
 		
@@ -226,7 +250,7 @@ public class AccountDaoPostgres implements AccountDao {
 		
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
-		String sql = "delete * from accounts where account_id = '" + account.getAccountid() + "';";
+		String sql = "delete * from accounts where account_id = " + account.getAccountId() + ";";
 		
 		Statement statement;
 		try {

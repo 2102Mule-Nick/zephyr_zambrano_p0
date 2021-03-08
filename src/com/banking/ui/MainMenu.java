@@ -308,6 +308,7 @@ public class MainMenu implements Menu {
 						if (selection.equals("DELETE ACCOUNT")) {
 							accountDao.deleteAccount(account);
 							
+							// TODO move this; if account isn't successfully deleted, this still prints
 							System.out.println("Account successfully deleted. Have a nice day!");
 							System.out.println();
 							
@@ -408,7 +409,7 @@ public class MainMenu implements Menu {
 		this.scanner = scanner;
 	}
 
-	public AccountDao getAccountDao() {
+	public AccountDaoPostgres getAccountDao() {
 		return accountDao;
 	}
 

@@ -19,11 +19,6 @@ public class Driver {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		// Kryo
-		// AccountDaoKryo accountDao = new AccountDaoKryo();
-		
-		// postgres
-		// AccountDao accountDao = new AccountDaoPostgres();
 		AccountDaoPostgres accountDao = new AccountDaoPostgres();
 		
 		MainMenu mainMenu = new MainMenu(accountDao);
