@@ -17004,3 +17004,356 @@ Log session start time Mon Mar 08 17:54:28 EST 2021<br>
 <td title="root category">root</td>
 <td title="Message">Successfully updated the account in the database</td>
 </tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 10:27:49 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to retrieve an existing account from the database</td>
+</tr>
+
+<tr>
+<td>181</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1092</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>1114</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Account with matching username found in the database</td>
+</tr>
+
+<tr>
+<td>1119</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">The given password matches the account's password</td>
+</tr>
+
+<tr>
+<td>1123</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1333</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to update database using prepared statement</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: syntax error at or near &quot;pass_word&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 36
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:153)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:214)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:47)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:38)
+</td></tr>
+
+<tr>
+<td>1343</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1397</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>1508</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully updated the account in the database</td>
+</tr>
+
+<tr>
+<td>61482</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>61567</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Unable to update database using prepared statement</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: ERROR: syntax error at or near &quot;pass_word&quot;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  Position: 36
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:153)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.dao.AccountDaoPostgres.updateAccount(AccountDaoPostgres.java:214)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.quit(MainMenu.java:429)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.ui.MainMenu.displayOptions(MainMenu.java:335)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.Driver.main(Driver.java:38)
+</td></tr>
+
+<tr>
+<td>61568</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>61631</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>61636</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully updated the account in the database</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 10:29:00 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to retrieve an existing account from the database</td>
+</tr>
+
+<tr>
+<td>30</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>746</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully connected to the database</td>
+</tr>
+
+<tr>
+<td>767</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Account with matching username found in the database</td>
+</tr>
+
+<tr>
+<td>769</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">The given password matches the account's password</td>
+</tr>
+
+<tr>
+<td>773</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>958</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Account udpated in the database using prepared statement</td>
+</tr>
+
+<tr>
+<td>958</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1134</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>1141</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully updated the account in the database</td>
+</tr>
+
+<tr>
+<td>18535</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>18618</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Account udpated in the database using prepared statement</td>
+</tr>
+
+<tr>
+<td>18619</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>18776</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>18787</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully updated the account in the database</td>
+</tr>
+
+<tr>
+<td>28199</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>28279</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Account udpated in the database using prepared statement</td>
+</tr>
+
+<tr>
+<td>28279</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>28334</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to update the account in the database</td>
+</tr>
+
+<tr>
+<td>28338</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully updated the account in the database</td>
+</tr>

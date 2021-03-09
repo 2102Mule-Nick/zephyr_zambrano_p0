@@ -1,6 +1,7 @@
 package com.banking.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -172,67 +173,56 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void updateAccount(Account account) {
-		// TODO change to prepared statements to protect against sql injection attacks
-		
-		
-		/*
-		 * 
-		 * Connection conn = null;
-		
-		PreparedStatement stmt = null;
-		
-		String sql = "update user_acc set pass_word = ? WHERE username = ?";
-		
-		conn = ConnectionFactoryPostgres.getConnection();
-		
-		try {
-			stmt=conn.prepareStatement(sql);
-			stmt.setString(1, new_password);
-			stmt.setString(2, user.getUsername());
-			stmt.execute();
-			log.info("User updated");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			log.info("Unsuccessful update");
-		}
-		 * 
+		/**
+		 * Connects to Postgres database and updates the account.
+		 * Uses a prepared statement to protect against SQL injection attacks.
+		 * @param Account account
 		 */
+		
+		String sql = "update accounts set "
+				+ "user_name = ?, "
+				+ "pass_word = ?, "
+				+ "first_name = ?, "
+				+ "middle_name = ?, "
+				+ "last_name = ?, "
+				+ "street = ?, "
+				+ "city = ?, "
+				+ "state = ?, "
+				+ "zip_code = ?, "
+				+ "email = ?, "
+				+ "phone_number = ?, "
+				+ "checking_account_balance = ?, "
+				+ "savings_account_balance = ? "
+				+ "where account_id = ?";
+		
+		log.info("Attempting to update the account in the database using a prepared statement");
 		
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
-		String sql = "update accounts set "
-				+ "(user_name, pass_word, first_name, middle_name, last_name, street, city, state, zip_code, "
-				+ "email, phone_number, checking_account_balance, savings_account_balance) "
-				+ "= ('"
-				+ account.getUsername() + "', '" 
-				+ account.getPassword() + "', '" 
-				+ account.getFirstname() + "', '" 
-				+ account.getMiddlename() + "', '" 
-				+ account.getLastname() + "', '" 
-				+ account.getStreet() + "', '" 
-				+ account.getCity() + "', '" 
-				+ account.getState() + "', '" 
-				+ account.getZipcode() + "', '"
-				+ account.getEmail() + "', '" 
-				+ account.getPhoneNumber() + "', " 
-				+ account.getCheckingAccountBalance() + ", " 
-				+ account.getSavingsAccountBalance() + ") "
-				+ "where account_id = " + account.getAccountId() + ";";
-		
-		log.info("Attempting to update the account in the database");
-		
-		Statement statement;
+		PreparedStatement preparedStatement = null;
 		
 		try {
-			statement = connection.createStatement();
-			statement.executeUpdate(sql);
-			connection.close();
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, account.getUsername());
+			preparedStatement.setString(2, account.getPassword());
+			preparedStatement.setString(3, account.getFirstname());
+			preparedStatement.setString(4, account.getMiddlename());
+			preparedStatement.setString(5, account.getLastname());
+			preparedStatement.setString(6, account.getStreet());
+			preparedStatement.setString(7, account.getCity());
+			preparedStatement.setString(8, account.getState());
+			preparedStatement.setString(9, account.getZipcode());
+			preparedStatement.setString(10, account.getEmail());
+			preparedStatement.setString(11, account.getPhoneNumber());
+			preparedStatement.setInt(12, account.getCheckingAccountBalance());
+			preparedStatement.setInt(13, account.getSavingsAccountBalance());
+			preparedStatement.setInt(14, account.getAccountId());
+			preparedStatement.execute();
 			
-			log.info("Successfully updated the account in the database");
+			log.info("Account successfully updated in the database using a prepared statement");
 		}
 		catch (SQLException e) {
-			log.error("Unable to connect to the database; unable to create user", e);
+			log.error("Unable to update the account in the database using a prepared statement", e);
 			e.printStackTrace();
 		}
 		
