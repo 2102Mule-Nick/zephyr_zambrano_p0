@@ -44,6 +44,7 @@ public class ConnectionFactoryPostgres {
 		}
 		catch (ClassNotFoundException e) {
 			System.out.println("Failed to load Driver");
+			e.printStackTrace();
 		}
 		
 		log.info("URL : " + URL);
@@ -53,6 +54,7 @@ public class ConnectionFactoryPostgres {
 		}
 		catch (SQLException e) {
 			log.error("Failed to connect to DB", e);
+			e.printStackTrace();
 		}
 		
 		return null;

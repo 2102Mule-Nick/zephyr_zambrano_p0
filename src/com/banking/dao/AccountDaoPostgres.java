@@ -15,11 +15,24 @@ import com.banking.service.MoneyManagement;
 import com.banking.util.ConnectionFactoryPostgres;
 
 public class AccountDaoPostgres implements AccountDao {
+	/**
+	 * Handles all connections to the Postgres database to create accounts, update accounts, and delete accounts.
+	 * 
+	 * @see Account
+	 */
 
 	private Logger log = Logger.getRootLogger();
 
 	@Override
 	public boolean getAccountByUsername(String username) {
+		/**
+		 * Connects to the Postgres database to check if the given username is already used by an existing account.
+		 * 
+		 * @param username		
+		 * @return true		returns true if the given username is already being used by an existing account
+		 * @return false	returns false if the given username is not being used by any existing accounts
+		 * @see SignupMenu
+		 */
 		
 		log.info("Checking to see if the username is taken");
 		
@@ -58,6 +71,17 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public Account getAccountByUsernameAndPassword(String username, String password) throws AccountNotFound, InvalidPassword {
+		/**
+		 * Connects to the Postgres database to attempt to retrieve an account with the give username and password.
+		 * 
+		 * @param username		the username input by the user
+		 * @param password		the password input by the user
+		 * @return Account account from the database with matching username and password
+		 * @exception AccountNotFound
+		 * @exception InvalidPassword
+		 * @see Account
+		 * @see LoginMenu
+		 */
 		
 		log.info("Attempting to retrieve an existing account from the database");
 		
@@ -135,7 +159,9 @@ public class AccountDaoPostgres implements AccountDao {
 		/**
 		 * Creates a new account in the Postgres database.
 		 * Uses a prepared statement to protect against SQL injection attacks.
-		 * @param Account account
+		 * 
+		 * @param account	the account to be created
+		 * @see Account
 		 */
 		
 		String sql = "insert into accounts "
@@ -179,9 +205,11 @@ public class AccountDaoPostgres implements AccountDao {
 	@Override
 	public void updateAccount(Account account) {
 		/**
-		 * Connects to Postgres database and updates the account.
+		 * Connects to the Postgres database and updates the account.
 		 * Uses a prepared statement to protect against SQL injection attacks.
-		 * @param Account account
+		 * 
+		 * @param account	the account to be updaated
+		 * @see Account
 		 */
 		
 		String sql = "update accounts set "
@@ -237,24 +265,33 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void deleteAccount(Account account) {
+		/**
+		 * Connects to the Postgres database to delete the account.
+		 * Uses a prepared statement.
+		 * 
+		 * @param account	the account to be deleted
+		 * @see Account
+		 */
 		
 		log.trace("deleteAccount method in AccountDaoPostgres class");
 		log.info("Attempting to delete account");
 		
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
-		String sql = "delete from accounts where account_id = " + account.getAccountId() + ";";
+		String sql = "delete from accounts where account_id = ?;";
 		
-		Statement statement;
+		PreparedStatement preparedStatement;
 		
 		try {
-			statement = connection.createStatement();
-			statement.executeUpdate(sql);
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, account.getAccountId());
+			preparedStatement.execute();
+			
 			connection.close();
-			log.info("Successfully deleted account");
+			log.info("Successfully deleted the account in the database using a prepared statement");
 		}
 		catch (SQLException e) {
-			log.error("Unable to connect to database to delete account");
+			log.error("Unable to connect to database to delete account using a prepared statement");
 			e.printStackTrace();
 		}
 
@@ -262,6 +299,12 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void viewAccountDetails(Account account) {
+		/**
+		 * Gets all of the account information from the given Account object and prints it to the user.
+		 * 
+		 * @param account	the account from which the data will be retrieved from
+		 * @see Account
+		 */
 		
 		log.info("Getting account details");
 		
@@ -281,6 +324,12 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void viewAccountBalances(Account account) {
+		/**
+		 * Gets the checking and savings account balances from the given Account object and prints it to the user.
+		 * 
+		 * @param account	the account from which the data will be retrieved from
+		 * @see Account
+		 */
 		
 		log.info("Getting account balances");
 		
@@ -292,6 +341,15 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void depositIntoChecking(Account account, String amount) {
+		/**
+		 * Deposits the given amount into the given Account object's checking account field.
+		 * 
+		 * @param account	the account to have money deposited into
+		 * @param amount	the amount to be deposited into checking
+		 * @see Account
+		 * @see MoneyManagement
+		 * @see Account#setCheckingAccountBalance(int checkingAccountBalance)
+		 */
 		
 		log.info("Attempting to deposit into checking");
 		
@@ -323,6 +381,15 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void depositIntoSavings(Account account, String amount) {
+		/**
+		 * Deposits the given amount into the given Account object's savings account field.
+		 * 
+		 * @param account	the account to have money deposited into
+		 * @param amount	the amount to be deposited into savings
+		 * @see Account
+		 * @see MoneyManagement
+		 * @see Account#setSavingsAccountBalance(int savingsAccountBalance)
+		 */
 		
 		log.info("Attempting to deposit into savings");
 		
@@ -354,6 +421,15 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void withdrawFromChecking(Account account, String amount) {
+		/**
+		 * Withdraws the given amount from the given account's checking account field.
+		 * 
+		 * @param account	the account to have money withdrawn from
+		 * @param amount	the amount to be withdrawn from checking
+		 * @see Account
+		 * @see MoneyManagement
+		 * @see Account#setCheckingAccountBalance(int checkingAccountBalance)
+		 */
 		
 		log.info("Attempting to withdraw from checking");
 		
@@ -393,6 +469,15 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void withdrawFromSavings(Account account, String amount) {
+		/**
+		 * Withdraws the given amount from the given account's savings account field.
+		 * 
+		 * @param account	the account to have money withdrawn from
+		 * @param amount	the amount to be withdrawn from savings
+		 * @see Account
+		 * @see MoneyManagement
+		 * @see Account#setSavingsAccountBalance(int savingsAccountBalance)
+		 */
 		
 		log.info("Attempting to withdraw from savings");
 		
@@ -432,6 +517,17 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void transferFromCheckingToSavings(Account account, String amount) {
+		/**
+		 * Transfers the given amount from the given account's checking account field to the 
+		 * given account's savings account field.
+		 * 
+		 * @param account	the account to have money transfered from checking to savings
+		 * @param amount	the amount to be withdrawn from checking and deposited into savings
+		 * @see Account
+		 * @see MoneyManagement
+		 * @see Account#setCheckingAccountBalance(int checkingAccountBalance)
+		 * @see Account#setSavingsAccountBalance(int savingsAccountBalance)
+		 */
 		
 		log.info("Attempting to transfer money from checking to savings");
 		
@@ -473,6 +569,17 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void transferFromSavingsToChecking(Account account, String amount) {
+		/**
+		 * Transfers the given amount from the given account's savings account field to the 
+		 * given account's checking account field.
+		 * 
+		 * @param account	the account to have money transfered from savings to checking
+		 * @param amount	the amount to be withdrawn from savings and deposited into checking
+		 * @see Account
+		 * @see MoneyManagement
+		 * @see Account#setCheckingAccountBalance(int checkingAccountBalance)
+		 * @see Account#setSavingsAccountBalance(int savingsAccountBalance)
+		 */
 		
 		log.info("Attempting to transfer money from savings to checking");
 		
