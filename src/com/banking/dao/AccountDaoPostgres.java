@@ -132,40 +132,45 @@ public class AccountDaoPostgres implements AccountDao {
 
 	@Override
 	public void createAccount(Account account) {
-		// TODO change to prepared statements to protect against sql injection attacks
-		
-		log.info("Attempting to create a new account");
-		
-		Connection connection = ConnectionFactoryPostgres.getConnection();
+		/**
+		 * Creates a new account in the Postgres database.
+		 * Uses a prepared statement to protect against SQL injection attacks.
+		 * @param Account account
+		 */
 		
 		String sql = "insert into accounts "
 				+ "(user_name, pass_word, first_name, middle_name, last_name, street, city, state, zip_code, "
 				+ "email, phone_number, checking_account_balance, savings_account_balance) "
-				+ "values ('"
-				+ account.getUsername() + "', '" 
-				+ account.getPassword() + "', '" 
-				+ account.getFirstname() + "', '" 
-				+ account.getMiddlename() + "', '" 
-				+ account.getLastname() + "', '" 
-				+ account.getStreet() + "', '" 
-				+ account.getCity() + "', '" 
-				+ account.getState() + "', '" 
-				+ account.getZipcode() + "', '"
-				+ account.getEmail() + "', '" 
-				+ account.getPhoneNumber() + "', " 
-				+ 0 + ", " 
-				+ 0 + ");";
+				+ "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 		
-		Statement statement;
+		PreparedStatement preparedStatement;
+		
+		Connection connection = ConnectionFactoryPostgres.getConnection();
+		
+		log.info("Attempting to create a new account using a prepared statement");
 		
 		try {
-			statement = connection.createStatement();
-			statement.executeUpdate(sql);
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, account.getUsername());
+			preparedStatement.setString(2, account.getPassword());
+			preparedStatement.setString(3, account.getFirstname());
+			preparedStatement.setString(4, account.getMiddlename());
+			preparedStatement.setString(5, account.getLastname());
+			preparedStatement.setString(6, account.getStreet());
+			preparedStatement.setString(7, account.getCity());
+			preparedStatement.setString(8, account.getState());
+			preparedStatement.setString(9, account.getZipcode());
+			preparedStatement.setString(10, account.getEmail());
+			preparedStatement.setString(11, account.getPhoneNumber());
+			preparedStatement.setInt(12, account.getCheckingAccountBalance());
+			preparedStatement.setInt(13, account.getSavingsAccountBalance());
+			preparedStatement.execute();
+			
 			connection.close();
-			log.info("Successfully created a new account");
+			log.info("Successfully created a new account using a prepared statement");
 		}
 		catch (SQLException e) {
-			log.error("Unable to connect to the database; unable to create user", e);
+			log.error("Unable to connect to the database and create a new account using a prepared statement", e);
 			e.printStackTrace();
 		}
 		
@@ -199,7 +204,7 @@ public class AccountDaoPostgres implements AccountDao {
 		
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
-		PreparedStatement preparedStatement = null;
+		PreparedStatement preparedStatement;
 		
 		try {
 			preparedStatement = connection.prepareStatement(sql);
@@ -218,6 +223,8 @@ public class AccountDaoPostgres implements AccountDao {
 			preparedStatement.setInt(13, account.getSavingsAccountBalance());
 			preparedStatement.setInt(14, account.getAccountId());
 			preparedStatement.execute();
+			
+			connection.close();
 			
 			log.info("Account successfully updated in the database using a prepared statement");
 		}
@@ -239,6 +246,7 @@ public class AccountDaoPostgres implements AccountDao {
 		String sql = "delete from accounts where account_id = " + account.getAccountId() + ";";
 		
 		Statement statement;
+		
 		try {
 			statement = connection.createStatement();
 			statement.executeUpdate(sql);
