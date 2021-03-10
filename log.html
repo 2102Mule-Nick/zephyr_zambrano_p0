@@ -19001,3 +19001,1836 @@ Log session start time Tue Mar 09 15:26:54 EST 2021<br>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;	... 74 more
 </td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:34:17 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://null:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2353</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Failed to connect to DB</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: The connection attempt failed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:223)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.makeConnection(Driver.java:465)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.connect(Driver.java:264)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.createConnection(ConnectionFactoryPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.getConnection(ConnectionFactoryPostgres.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.test.AccountDaoPostgresTest.createAccountTest(AccountDaoPostgresTest.java:58)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:498)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.UnknownHostException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:607)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 74 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:36:26 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://null:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2509</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Failed to connect to DB</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: The connection attempt failed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:223)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.makeConnection(Driver.java:465)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.connect(Driver.java:264)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.createConnection(ConnectionFactoryPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.getConnection(ConnectionFactoryPostgres.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.test.AccountDaoPostgresTest.createAccountTest(AccountDaoPostgresTest.java:59)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:498)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.UnknownHostException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:607)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 74 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:39:40 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://null:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2331</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Failed to connect to DB</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: The connection attempt failed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:223)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.makeConnection(Driver.java:465)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.connect(Driver.java:264)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.createConnection(ConnectionFactoryPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.getConnection(ConnectionFactoryPostgres.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.test.AccountDaoPostgresTest.createAccountTest(AccountDaoPostgresTest.java:59)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:498)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.UnknownHostException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:607)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 74 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:40:22 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://null:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2350</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Failed to connect to DB</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: The connection attempt failed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:223)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.makeConnection(Driver.java:465)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.connect(Driver.java:264)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.createConnection(ConnectionFactoryPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.getConnection(ConnectionFactoryPostgres.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.test.AccountDaoPostgresTest.createAccountTest(AccountDaoPostgresTest.java:59)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:498)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.UnknownHostException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:607)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 74 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:42:20 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://null:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2344</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Failed to connect to DB</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: The connection attempt failed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:223)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.makeConnection(Driver.java:465)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.connect(Driver.java:264)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.createConnection(ConnectionFactoryPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.getConnection(ConnectionFactoryPostgres.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.test.AccountDaoPostgresTest.createAccountTest(AccountDaoPostgresTest.java:59)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:498)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.UnknownHostException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:607)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 74 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:44:26 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://null:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2366</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Failed to connect to DB</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: The connection attempt failed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:223)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.makeConnection(Driver.java:465)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.connect(Driver.java:264)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.createConnection(ConnectionFactoryPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.getConnection(ConnectionFactoryPostgres.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.test.AccountDaoPostgresTest.createAccountTest(AccountDaoPostgresTest.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:498)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.UnknownHostException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:607)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 74 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:45:09 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://null:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2404</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Failed to connect to DB</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: The connection attempt failed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:223)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.makeConnection(Driver.java:465)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.connect(Driver.java:264)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.createConnection(ConnectionFactoryPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.getConnection(ConnectionFactoryPostgres.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.test.AccountDaoPostgresTest.createAccountTest(AccountDaoPostgresTest.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:498)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.UnknownHostException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:607)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 74 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:45:41 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://null:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2349</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Failed to connect to DB</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: The connection attempt failed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:223)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.makeConnection(Driver.java:465)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.connect(Driver.java:264)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.createConnection(ConnectionFactoryPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.getConnection(ConnectionFactoryPostgres.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.test.AccountDaoPostgresTest.createAccountTest(AccountDaoPostgresTest.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:498)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.UnknownHostException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:607)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 74 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:47:01 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://null:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2390</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Failed to connect to DB</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: The connection attempt failed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:223)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.makeConnection(Driver.java:465)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.connect(Driver.java:264)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.createConnection(ConnectionFactoryPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.getConnection(ConnectionFactoryPostgres.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.test.AccountDaoPostgresTest.createAccountTest(AccountDaoPostgresTest.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:498)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.UnknownHostException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:607)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 74 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:53:32 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://null:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>2381</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="root category">root</td>
+<td title="Message">Failed to connect to DB</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">org.postgresql.util.PSQLException: The connection attempt failed.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:223)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.makeConnection(Driver.java:465)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.Driver.connect(Driver.java:264)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.createConnection(ConnectionFactoryPostgres.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.util.ConnectionFactoryPostgres.getConnection(ConnectionFactoryPostgres.java:72)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.banking.test.AccountDaoPostgresTest.createAccountTest(AccountDaoPostgresTest.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.reflect.Method.invoke(Method.java:498)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.util.ArrayList.forEach(ArrayList.java:1259)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:141)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.UnknownHostException: null
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:607)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:95)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 74 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:56:02 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1528</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1606</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to create a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>1782</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully created a new account using a prepared statement</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:56:58 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:58:46 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 15:59:45 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1097</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1214</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to create a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>1221</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully created a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>1301</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 16:09:51 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1253</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1333</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to create a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>1340</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully created a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>1395</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 16:10:07 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1329</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1484</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to create a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>1492</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully created a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>1535</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 16:11:16 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1536</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1605</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to create a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>1615</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully created a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>1658</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 16:14:18 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1595</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1762</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to create a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>1782</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully created a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>1899</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 16:14:46 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1243</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 16:15:02 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>1237</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Mar 09 16:15:27 EST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3038</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>
+
+<tr>
+<td>3290</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Attempting to create a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>3317</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">Successfully created a new account using a prepared statement</td>
+</tr>
+
+<tr>
+<td>3518</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="root category">root</td>
+<td title="Message">URL : jdbc:postgresql://localhost:5432/banking_application_database?</td>
+</tr>

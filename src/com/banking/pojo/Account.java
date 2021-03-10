@@ -90,10 +90,11 @@ public class Account {
 		 * Sets the full name of an account user with the given first name, middle name, and last name.
 		 * Saves the full name in the private String fullName.
 		 * After doing this, it sets the separate private Strings firstname, middlename, and lastname
-		 * with the given first name, middle name, and last name
-		 * @param String firstname the account user's first name
-		 * @param String middlename the account user's middle name
-		 * @param String lastname the account user's last name
+		 * with the given first name, middle name, and last name.
+		 * 
+		 * @param firstname		the account user's first name
+		 * @param middlename	the account user's middle name
+		 * @param lastname		the account user's last name
 		 * 
 		 */
 		
@@ -159,10 +160,10 @@ public class Account {
 		 * Saves the full address in the private String fullAddress, and then saves each
 		 * piece of the address in their respective private String variables.
 		 * 
-		 * @param String street
-		 * @param Strimg city
-		 * @param String state
-		 * @param String zipcode
+		 * @param street	the given street
+		 * @param city		the given city
+		 * @param state		the given state
+		 * @param zipcode	the given zip code
 		 */
 		
 		this.fullAddress = street + " " + city + " " + state + " " + zipcode;

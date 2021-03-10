@@ -22,6 +22,16 @@ public class AccountDaoPostgres implements AccountDao {
 	 */
 
 	private Logger log = Logger.getRootLogger();
+	
+	Connection connection;
+
+	public Connection getConnection() {
+		return connection;
+	}
+
+	public void setConnection(Connection connection) {
+		this.connection = connection;
+	}
 
 	@Override
 	public boolean getAccountByUsername(String username) {
@@ -36,7 +46,7 @@ public class AccountDaoPostgres implements AccountDao {
 		
 		log.info("Checking to see if the username is taken");
 		
-		Connection connection = ConnectionFactoryPostgres.getConnection();
+		// Connection connection = ConnectionFactoryPostgres.getConnection();
 		
 		try {
 			

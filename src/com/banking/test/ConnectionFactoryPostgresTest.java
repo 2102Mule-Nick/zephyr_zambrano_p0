@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import com.banking.util.ConnectionFactoryPostgres;
 
-class ConnectionFactoryTest {
+class ConnectionFactoryPostgresTest {
 
 	ConnectionFactoryPostgres connectionFactory;
 	
