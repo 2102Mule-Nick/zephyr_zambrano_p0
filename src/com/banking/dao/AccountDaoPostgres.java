@@ -184,8 +184,8 @@ public class AccountDaoPostgres implements AccountDao {
 		log.info("Attempting to create a new account using a prepared statement");
 		
 		try {
-			preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-			// preparedStatement = connection.prepareStatement(sql);
+			// preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, account.getUsername());
 			preparedStatement.setString(2, account.getPassword());
 			preparedStatement.setString(3, account.getFirstname());
