@@ -89,20 +89,6 @@ public class SignupMenu implements Menu {
 			System.out.println();
 		}
 		
-		String email = "";
-		while (email.equals("")) {
-			System.out.print("Email: ");
-			email = scanner.nextLine();
-			System.out.println();
-		}
-		
-		String phoneNumber = "";
-		while (phoneNumber.equals("")) {
-			System.out.print("Phone number: ");
-			phoneNumber = scanner.nextLine();
-			System.out.println();
-		}
-		
 		String street = "";
 		while (street.equals("")) {
 			System.out.print("Street: ");
@@ -128,6 +114,20 @@ public class SignupMenu implements Menu {
 		while (zipcode.equals("")) {
 			System.out.print("Zip code: ");
 			zipcode = scanner.nextLine();
+			System.out.println();
+		}
+		
+		String email = "";
+		while (email.equals("")) {
+			System.out.print("Email: ");
+			email = scanner.nextLine();
+			System.out.println();
+		}
+		
+		String phoneNumber = "";
+		while (phoneNumber.equals("")) {
+			System.out.print("Phone number: ");
+			phoneNumber = scanner.nextLine();
 			System.out.println();
 		}
 		
