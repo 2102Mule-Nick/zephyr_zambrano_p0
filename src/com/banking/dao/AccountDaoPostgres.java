@@ -23,7 +23,7 @@ public class AccountDaoPostgres implements AccountDao {
 
 	private Logger log = Logger.getRootLogger();
 	
-	/*Connection connection = ConnectionFactoryPostgres.getConnection();
+	Connection connection = ConnectionFactoryPostgres.getConnection();
 
 	public Connection getConnection() {
 		return connection;
@@ -31,7 +31,7 @@ public class AccountDaoPostgres implements AccountDao {
 
 	public void setConnection(Connection connection) {
 		this.connection = connection;
-	}*/
+	}
 
 	@Override
 	public boolean getAccountByUsername(String username) {
@@ -52,7 +52,7 @@ public class AccountDaoPostgres implements AccountDao {
 			
 			log.info("Successfully connected to the database");
 			
-			String sql = "select * from accounts where user_name = '" + username + "';";
+			String sql = "select * from accounts.accounts where user_name = '" + username + "';";
 			
 			Statement statement = connection.createStatement();
 			
@@ -103,7 +103,7 @@ public class AccountDaoPostgres implements AccountDao {
 			
 			log.info("Successfully connected to the database");
 			
-			String sql = "select * from accounts where user_name = '" + username + "';";
+			String sql = "select * from accounts.accounts where user_name = '" + username + "';";
 			
 			Statement statement = connection.createStatement();
 			
@@ -172,7 +172,7 @@ public class AccountDaoPostgres implements AccountDao {
 		 * @see Account
 		 */
 		
-		String sql = "insert into accounts "
+		String sql = "insert into accounts.accounts "
 				+ "(user_name, pass_word, first_name, middle_name, last_name, street, city, state, zip_code, "
 				+ "email, phone_number, checking_account_balance, savings_account_balance) "
 				+ "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
@@ -184,7 +184,8 @@ public class AccountDaoPostgres implements AccountDao {
 		log.info("Attempting to create a new account using a prepared statement");
 		
 		try {
-			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			// preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, account.getUsername());
 			preparedStatement.setString(2, account.getPassword());
 			preparedStatement.setString(3, account.getFirstname());
@@ -212,7 +213,7 @@ public class AccountDaoPostgres implements AccountDao {
 	
 	public void updateAccountUsername(Account account, String oldUsername, String newUsername) {
 		
-		String sql = "update accounts set user_name = ? where user_name = ?";
+		String sql = "update accounts.accounts set user_name = ? where user_name = ?";
 		
 		log.info("Attempting to update the account username in the database using a prepared statement");
 		
@@ -247,7 +248,7 @@ public class AccountDaoPostgres implements AccountDao {
 		 * @see Account
 		 */
 		
-		String sql = "update accounts set "
+		String sql = "update accounts.accounts set "
 				+ "user_name = ?, "
 				+ "pass_word = ?, "
 				+ "first_name = ?, "
@@ -313,7 +314,7 @@ public class AccountDaoPostgres implements AccountDao {
 		
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
-		String sql = "delete from accounts where user_name = ?;";
+		String sql = "delete from accounts.accounts where user_name = ?;";
 		
 		PreparedStatement preparedStatement;
 		
