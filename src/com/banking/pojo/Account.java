@@ -29,8 +29,8 @@ public class Account {
 	}
 	
 	public Account(String username, String password, String firstname, String middlename,
-			String lastname, String email, String phoneNumber, String street, String city,
-			String state, String zipcode) {
+			String lastname, String street, String city,
+			String state, String zipcode, String email, String phoneNumber) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -41,15 +41,15 @@ public class Account {
 		
 		setFullName(firstname, middlename, lastname);
 		
-		this.email = email;
-		this.phoneNumber = phoneNumber;
-		
 		this.street = street;
 		this.city = city;
 		this.state = state;
 		this.zipcode = zipcode;
 		
 		setFullAddress(street, city, state, zipcode);
+		
+		this.email = email;
+		this.phoneNumber = phoneNumber;
 		
 		// checking and savings accounts balances are initialized to 0
 		// user has to deposit money after creating account

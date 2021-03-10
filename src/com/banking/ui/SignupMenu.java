@@ -132,7 +132,7 @@ public class SignupMenu implements Menu {
 		}
 		
 		Account newAccount = new Account(username, password, firstname, middlename, lastname,
-				email, phoneNumber, street, city, state, zipcode);
+				street, city, state, zipcode, email, phoneNumber);
 		
 		mainMenu.setAccount(newAccount);
 		accountDao.createAccount(newAccount);

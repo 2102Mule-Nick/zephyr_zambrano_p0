@@ -181,7 +181,8 @@ public class AccountDaoPostgres implements AccountDao {
 		
 		PreparedStatement preparedStatement;
 		
-		Connection connection = ConnectionFactoryPostgres.getConnection();
+		// Connection connection = ConnectionFactoryPostgres.getConnection();
+		// TODO uncomment
 		
 		log.info("Attempting to create a new account using a prepared statement");
 		
@@ -240,7 +241,8 @@ public class AccountDaoPostgres implements AccountDao {
 		
 		log.info("Attempting to update the account in the database using a prepared statement");
 		
-		Connection connection = ConnectionFactoryPostgres.getConnection();
+		// TODO uncomment
+		// Connection connection = ConnectionFactoryPostgres.getConnection();
 		
 		PreparedStatement preparedStatement;
 		
@@ -286,7 +288,8 @@ public class AccountDaoPostgres implements AccountDao {
 		log.trace("deleteAccount method in AccountDaoPostgres class");
 		log.info("Attempting to delete account");
 		
-		Connection connection = ConnectionFactoryPostgres.getConnection();
+		// Connection connection = ConnectionFactoryPostgres.getConnection();
+		// TODO uncomment
 		
 		String sql = "delete from accounts where account_id = ?;";
 		
