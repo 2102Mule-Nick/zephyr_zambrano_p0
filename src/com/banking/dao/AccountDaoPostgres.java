@@ -23,7 +23,7 @@ public class AccountDaoPostgres implements AccountDao {
 
 	private Logger log = Logger.getRootLogger();
 	
-	Connection connection = ConnectionFactoryPostgres.getConnection();
+	/*Connection connection = ConnectionFactoryPostgres.getConnection();
 
 	public Connection getConnection() {
 		return connection;
@@ -31,7 +31,7 @@ public class AccountDaoPostgres implements AccountDao {
 
 	public void setConnection(Connection connection) {
 		this.connection = connection;
-	}
+	}*/
 
 	@Override
 	public boolean getAccountByUsername(String username) {
@@ -123,8 +123,6 @@ public class AccountDaoPostgres implements AccountDao {
 				
 				account = new Account();
 				
-				account.setAccountId(rs.getInt("account_id"));
-				
 				account.setUsername(rs.getString("user_name"));
 				account.setPassword(rs.getString("pass_word"));
 				
@@ -145,7 +143,7 @@ public class AccountDaoPostgres implements AccountDao {
 				account.setPhoneNumber(rs.getString("phone_number"));
 				
 				account.setCheckingAccountBalance(rs.getInt("checking_account_balance"));
-				account.setCheckingAccountBalance(rs.getInt("savings_account_balance"));
+				account.setSavingsAccountBalance(rs.getInt("savings_account_balance"));
 			
 				connection.close();
 				
@@ -211,6 +209,33 @@ public class AccountDaoPostgres implements AccountDao {
 		}
 		
 	}
+	
+	public void updateAccountUsername(Account account, String oldUsername, String newUsername) {
+		
+		String sql = "update accounts set user_name = ? where user_name = ?";
+		
+		log.info("Attempting to update the account username in the database using a prepared statement");
+		
+		Connection connection = ConnectionFactoryPostgres.getConnection();
+		
+		PreparedStatement preparedStatement;
+		
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, newUsername);
+			preparedStatement.setString(2, oldUsername);
+			preparedStatement.execute();
+			
+			connection.close();
+			
+			log.info("Account successfully updated in the database using a prepared statement");
+		}
+		catch (SQLException e) {
+			log.error("Unable to update the account in the database using a prepared statement", e);
+			e.printStackTrace();
+		}
+		
+	}
 
 	@Override
 	public void updateAccount(Account account) {
@@ -218,7 +243,7 @@ public class AccountDaoPostgres implements AccountDao {
 		 * Connects to the Postgres database and updates the account.
 		 * Uses a prepared statement to protect against SQL injection attacks.
 		 * 
-		 * @param account	the account to be updaated
+		 * @param account	the account to be updated
 		 * @see Account
 		 */
 		
@@ -236,7 +261,7 @@ public class AccountDaoPostgres implements AccountDao {
 				+ "phone_number = ?, "
 				+ "checking_account_balance = ?, "
 				+ "savings_account_balance = ? "
-				+ "where account_id = ?";
+				+ "where user_name = ?";
 		
 		log.info("Attempting to update the account in the database using a prepared statement");
 		
@@ -259,7 +284,7 @@ public class AccountDaoPostgres implements AccountDao {
 			preparedStatement.setString(11, account.getPhoneNumber());
 			preparedStatement.setInt(12, account.getCheckingAccountBalance());
 			preparedStatement.setInt(13, account.getSavingsAccountBalance());
-			preparedStatement.setInt(14, account.getAccountId());
+			preparedStatement.setString(14, account.getUsername());
 			preparedStatement.execute();
 			
 			connection.close();
@@ -288,13 +313,13 @@ public class AccountDaoPostgres implements AccountDao {
 		
 		Connection connection = ConnectionFactoryPostgres.getConnection();
 		
-		String sql = "delete from accounts where account_id = ?;";
+		String sql = "delete from accounts where user_name = ?;";
 		
 		PreparedStatement preparedStatement;
 		
 		try {
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setInt(1, account.getAccountId());
+			preparedStatement.setString(1, account.getUsername());
 			preparedStatement.execute();
 			
 			connection.close();
@@ -381,6 +406,8 @@ public class AccountDaoPostgres implements AccountDao {
 			System.out.println(deposit + " has been successfully deposited into your checking account.");
 			System.out.println("Current checking account balance: " + account.getCheckingAccountBalance());
 			System.out.println();
+			
+			updateAccount(account);
 		}
 		else {
 			System.out.println("Invalid input; please enter a valid positive USD value.");
@@ -421,6 +448,8 @@ public class AccountDaoPostgres implements AccountDao {
 			System.out.println(deposit + " has been successfully deposited into your savings account.");
 			System.out.println("Current savings account balance: " + account.getSavingsAccountBalance());
 			System.out.println();
+			
+			updateAccount(account);
 		}
 		else {
 			System.out.println("Invalid input; please enter a valid positive USD value.");
@@ -468,6 +497,7 @@ public class AccountDaoPostgres implements AccountDao {
 				System.out.println(withdraw + " has been successfully withdrawn from your checking account.");
 				System.out.println("Current checking account balance: " + account.getCheckingAccountBalance());
 				System.out.println();
+				updateAccount(account);
 			}
 		}
 		else {
@@ -516,6 +546,8 @@ public class AccountDaoPostgres implements AccountDao {
 				System.out.println(withdraw + " has been successfully withdrawn from your savings account.");
 				System.out.println("Current savings account balance: " + account.getSavingsAccountBalance());
 				System.out.println();
+				
+				updateAccount(account);
 			}
 		}
 		else {
@@ -568,6 +600,8 @@ public class AccountDaoPostgres implements AccountDao {
 				System.out.println(transfer + " has been successfully transfered from checking to savings.");
 				System.out.println();
 				viewAccountBalances(account);
+				
+				updateAccount(account);
 			}
 		}
 		else {
@@ -620,6 +654,8 @@ public class AccountDaoPostgres implements AccountDao {
 				System.out.println(transfer + " has been successfully transfered from savings to checking.");
 				System.out.println();
 				viewAccountBalances(account);
+				
+				updateAccount(account);
 			}
 		}
 		else {

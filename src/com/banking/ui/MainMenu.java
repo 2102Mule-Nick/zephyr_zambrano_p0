@@ -44,8 +44,6 @@ public class MainMenu implements Menu {
 		
 		while (quit == false) {
 			
-			accountDao.updateAccount(account);
-			
 			System.out.println();
 			System.out.println("What would you like to do?");
 			System.out.println("a: account info");
@@ -255,12 +253,17 @@ public class MainMenu implements Menu {
 							usernameTaken = accountDao.getAccountByUsername(newUsername);
 						}
 						
+						accountDao.updateAccountUsername(account, account.getUsername(), newUsername);
+						
 						account.setUsername(newUsername);
+						
 					}
 					else {
 						System.out.println("Invalid selection; please try again");
 						System.out.println();
 					}
+					
+					accountDao.updateAccount(account);
 					
 					System.out.println("Account information has been successfully updated.");
 					System.out.println();

@@ -2,8 +2,6 @@ package com.banking.pojo;
 
 public class Account {
 	
-	private int accountId;
-	
 	private String username;
 	private String password;
 	
@@ -55,14 +53,6 @@ public class Account {
 		// user has to deposit money after creating account
 		this.checkingAccountBalance = 0;
 		this.savingsAccountBalance = 0;
-	}
-
-	public int getAccountId() {
-		return accountId;
-	}
-
-	public void setAccountId(int accountId) {
-		this.accountId = accountId;
 	}
 
 	public String getUsername() {
