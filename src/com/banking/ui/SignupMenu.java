@@ -3,6 +3,8 @@ package com.banking.ui;
 import java.util.Scanner;
 
 import com.banking.dao.AccountDao;
+import com.banking.exception.AccountNotFound;
+import com.banking.exception.InvalidPassword;
 import com.banking.pojo.Account;
 
 public class SignupMenu implements Menu {
@@ -50,6 +52,8 @@ public class SignupMenu implements Menu {
 		boolean usernameTaken = true;
 		
 		while (usernameTaken == true) {
+			
+			username = "";
 			
 			while (username.equals("")) {
 				System.out.print("Username: ");
@@ -134,10 +138,17 @@ public class SignupMenu implements Menu {
 		Account newAccount = new Account(username, password, firstname, middlename, lastname,
 				street, city, state, zipcode, email, phoneNumber);
 		
-		mainMenu.setAccount(newAccount);
 		accountDao.createAccount(newAccount);
 		
-		nextMenu = mainMenu;
+		try {
+			newAccount = accountDao.getAccountByUsernameAndPassword(username, password);
+			
+			mainMenu.setAccount(newAccount);
+			
+			nextMenu = mainMenu;
+		} catch (AccountNotFound | InvalidPassword e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

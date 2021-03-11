@@ -29,13 +29,19 @@ public class LoginMenu implements Menu {
 		System.out.println("You have selected login");
 		System.out.println();
 		
-		System.out.print("Please enter your username: ");
-		String username = scanner.nextLine();
-		System.out.println();
+		String username = "";
+		while (username.equals("")) {
+			System.out.print("Please enter your username: ");
+			username = scanner.nextLine();
+			System.out.println();
+		}
 		
-		System.out.print("Please enter your password: ");
-		String password = scanner.nextLine();
-		System.out.println();
+		String password = "";
+		while (password.equals("")) {
+			System.out.print("Please enter your password: ");
+			password = scanner.nextLine();
+			System.out.println();
+		}
 		
 		Account account = null;
 		
